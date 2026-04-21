@@ -1,0 +1,168 @@
+-- Nama Menu: SKIN BABI
+
+-- Variabel bantuan untuk efek visual
+local p = "❤️"
+local colors = {"[C]", "[R]", "[G]", "[B]", "[Y]"} -- Kode warna simulasi
+
+function LoadingEfek()
+    local loading = ""
+    for i = 1, 10 do
+        loading = loading .. p
+        gg.toast("Loading: " .. loading)
+        gg.sleep(100) -- Memberikan jeda agar efek terlihat
+    end
+end
+
+function MenuUtama()
+  local menu = gg.choice({
+    "1. CUPID PIG",
+    "2. CEREMONIAL PIG",
+    "3. NEXT UPDATE",
+    "4. KELUAR"
+  }, nil, "PIG SKIN")
+
+  if menu == 1 then 
+    LoadingEfek()
+    Cupid() 
+  end
+  if menu == 2 then 
+    LoadingEfek()
+    Ceremonial() 
+  end
+  if menu == 3 then NextUpdate() end
+  if menu == 4 then Exit() end
+  
+  -- Agar menu kembali muncul setelah pilihan selesai dijalankan
+  HOMEMENU = -1
+end
+
+function Cupid()
+  -- Logika CUPID PIG
+  -- Membersihkan hasil pencarian sebelumnya untuk menghindari konflik
+  gg.clearResults()
+
+  -- Mengambil semua item yang ada di daftar 'Saved List'
+  local items = gg.getListItems()
+  local toUpdate = {}
+  local count = 0
+
+  -- Loop untuk mengecek setiap item berdasarkan nama
+  for i, v in ipairs(items) do
+      local label = v.name
+      local found = false
+
+      -- Logika Pencocokan Nama dan Perubahan Nilai
+      if label == "HANZ DATA 1" then
+          v.value = "696B532Ch"
+          found = true
+      elseif label == "HANZ DATA 2" then
+          v.value = "69505F6Eh"
+          found = true
+      elseif label == "HANZ DATA 3" then
+          v.value = "61765F67h"
+          found = true
+      elseif label == "HANZ DATA 4" then
+          v.value = "746E656Ch"
+          found = true
+      elseif label == "HANZ DATA 5" then
+          v.value = "73656E69h"
+          found = true
+      elseif label == "HANZ DATA 6" then
+          v.value = "00796144h"
+          found = true
+      elseif label == "HANZ NILAI POINTER" then
+          v.value = "0"
+          found = true
+      elseif label == "HANZ NILAI" then
+          v.value = "2"
+          found = true
+      end
+
+      -- Jika nama cocok, atur status untuk dibekukan (freeze)
+      if found then
+          v.freeze = true
+          v.freezeType = gg.FREEZE_NORMAL
+          table.insert(toUpdate, v)
+          count = count + 1
+      end
+  end
+
+  -- Eksekusi perubahan dan pembekuan ke memori
+  if count > 0 then
+      gg.setValues(toUpdate)
+      gg.addListItems(toUpdate) -- Memastikan status 'freeze' aktif di daftar
+      gg.alert("Berhasil mengubah dan membekukan " .. count .. " data.")
+  else
+      gg.alert("Data tidak ditemukan! Pastikan nama di Saved List sudah sesuai.")
+  end
+end
+
+function Ceremonial()
+    -- Implementasi Logika CEREMONIAL PIG 
+    -- 1. Ambil semua item dari daftar tersimpan (Saved List)
+    local items = gg.getListItems()
+    
+    if #items == 0 then
+        gg.alert("Daftar simpanan kosong! Pastikan data sudah di-save dengan nama yang benar.")
+        return
+    end
+
+    local updateList = {}
+    local count = 0
+
+    -- 2. Loop melalui semua item untuk mencocokkan nama
+    for i, v in ipairs(items) do
+        -- Membersihkan variabel nilai dan flag pembekuan
+        local currentName = v.name
+        local newVal = nil
+        
+        -- Logika Filter Nama dan Penentuan Nilai Baru
+        if currentName == "HANZ DATA 1" then newVal = "696B5318h"
+        elseif currentName == "HANZ DATA 2" then newVal = "69505F6Eh"
+        elseif currentName == "HANZ DATA 3" then newVal = "4E435F67h"
+        elseif currentName == "HANZ DATA 4" then newVal = "00000059h"
+        elseif currentName == "HANZ DATA 5" then newVal = "00000000h"
+        elseif currentName == "HANZ DATA 6" then newVal = "00000000h"
+        elseif currentName == "HANZ NILAI POINTER" then newVal = "0"
+        elseif currentName == "HANZ NILAI" then newVal = "2"
+        end
+
+        -- 3. Jika nama cocok, masukkan ke tabel perubahan
+        if newVal ~= nil then
+            v.value = newVal
+            v.freeze = true -- Instruksi untuk membekukan data
+            table.insert(updateList, v)
+            count = count + 1
+        end
+    end
+
+    -- 4. Eksekusi perubahan ke memori
+    if #updateList > 0 then
+        gg.setValues(updateList)
+        gg.addListItems(updateList) -- Menambahkan kembali ke list untuk mengaktifkan pembekuan
+        gg.toast("Berhasil mengubah dan membekukan " .. count .. " data.")
+    else
+        gg.toast("Tidak ada nama yang cocok ditemukan di daftar simpanan.")
+    end
+end
+
+function NextUpdate()
+  gg.alert("saya adalah pengembang solo jadi update mungkin memerlukan waktu sedikit lebih lama, terimakasih telah menggunakan script ini.")
+end
+
+function Exit()
+  print("Script Berhenti. Terima kasih!")
+  os.exit()
+end
+
+-- Menjalankan Menu
+while true do
+  if gg.isVisible(true) then
+    HOMEMENU = 1
+    gg.setVisible(false)
+  end
+  if HOMEMENU == 1 then
+    MenuUtama()
+  end
+end
+
