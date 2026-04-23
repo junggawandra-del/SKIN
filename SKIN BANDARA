@@ -1,0 +1,726 @@
+-- SCRIPT UTAMA 
+-- EFEK LOADING
+function loading()
+  gg.toast("Loading.")
+  gg.sleep(200)
+  gg.toast("Loading..")
+  gg.sleep(200)
+  gg.toast("Loading...")
+  gg.sleep(200)
+  gg.toast("Loading [----------] 0%")
+  gg.sleep(150)
+  gg.toast("Loading [===-------] 30%")
+  gg.sleep(150)
+  gg.toast("Loading [======----] 60%")
+  gg.sleep(150)
+  gg.toast("Loading [=========--] 90%")
+  gg.sleep(150)
+  gg.toast("Loading [==========] 100%")
+  gg.sleep(200)
+  gg.toast("STARTING SCRIPT...")
+  gg.sleep(500)
+end
+
+-- LOGIKA AERIAL PORTAL
+function AERIAL_PORTAL_LOGIC()
+    gg.clearResults()
+    local items = gg.getListItems()
+    local updateList = {}
+
+    if #items == 0 then
+        gg.alert("⚠️ Saved List kosong!\nPastikan data sudah disimpan di daftar dengan nama 'HANZ DATA 1' dst.")
+        return
+    end
+
+    for i, v in ipairs(items) do
+        if v.name == "HANZ DATA 1" then
+            v.value = 0x696B5320
+            v.freeze = true
+        elseif v.name == "HANZ DATA 2" then
+            v.value = 0x69415F6E
+            v.freeze = true
+        elseif v.name == "HANZ DATA 3" then
+            v.value = 0x726F7072
+            v.freeze = true
+        elseif v.name == "HANZ DATA 4" then
+            v.value = 0x50535F74
+            v.freeze = true
+        elseif v.name == "HANZ DATA 5" then
+            v.value = 0x00000033
+            v.freeze = true
+        elseif v.name == "HANZ DATA 6" then
+            v.value = 0x00000000
+            v.freeze = true
+        elseif v.name == "HANZ NILAI POINTER" then
+            v.value = 0
+            v.freeze = true
+        elseif v.name == "HANZ NILAI" then
+            v.value = 2
+            v.freeze = true
+        end
+
+        if v.freeze then
+            table.insert(updateList, v)
+        end
+    end
+
+    if #updateList > 0 then
+        gg.setValues(updateList)
+        gg.addListItems(updateList)
+        gg.toast("✅ Aerial Portal: " .. #updateList .. " data berhasil diubah!")
+    else
+        gg.toast("⚠️ Tidak ditemukan nama 'HANZ DATA' yang cocok.")
+    end
+end
+
+-- LOGIKA FESTIVAL AIRPORT
+function FESTIVAL_AIRPORT_LOGIC()
+    local items = gg.getListItems()
+    if #items == 0 then
+        gg.alert("⚠️ Daftar simpan kosong!")
+        return
+    end
+
+    local updateList = {}
+    for i, v in ipairs(items) do
+        local needsUpdate = false
+        if v.name == "HANZ DATA 1" then
+            v.value = "696B5320h"
+            needsUpdate = true
+        elseif v.name == "HANZ DATA 2" then
+            v.value = "69415F6Eh"
+            needsUpdate = true
+        elseif v.name == "HANZ DATA 3" then
+            v.value = "726F7072h"
+            needsUpdate = true
+        elseif v.name == "HANZ DATA 4" then
+            v.value = "50535F74h"
+            needsUpdate = true
+        elseif v.name == "HANZ DATA 5" then
+            v.value = "00000037h"
+            needsUpdate = true
+        elseif v.name == "HANZ DATA 6" then
+            v.value = "00000000h"
+            needsUpdate = true
+        elseif v.name == "HANZ NILAI POINTER" then
+            v.value = "0"
+            needsUpdate = true
+        elseif v.name == "HANZ NILAI" then
+            v.value = "2"
+            needsUpdate = true
+        end
+
+        if needsUpdate then
+            v.freeze = true
+            table.insert(updateList, v)
+        end
+    end
+
+    if #updateList > 0 then
+        gg.setValues(updateList)
+        gg.addListItems(updateList)
+        gg.toast("✅ Festival Airport: Berhasil!")
+    end
+end
+
+-- LOGIKA TROPICAL AIRPORT
+function TROPICAL_AIRPORT_LOGIC()
+    gg.clearResults()
+    local items = gg.getListItems()
+    if #items == 0 then
+        gg.alert("Saved List kosong!")
+        return
+    end
+
+    local editList = {}
+    for i, item in ipairs(items) do
+        local found = false
+        if item.name == "HANZ DATA 1" then
+            item.value = "696B5320h"
+            found = true
+        elseif item.name == "HANZ DATA 2" then
+            item.value = "69415F6Eh"
+            found = true
+        elseif item.name == "HANZ DATA 3" then
+            item.value = "726F7072h"
+            found = true
+        elseif item.name == "HANZ DATA 4" then
+            item.value = "50535F74h"
+            found = true
+        elseif item.name == "HANZ DATA 5" then
+            item.value = "00000039h"
+            found = true
+        elseif item.name == "HANZ DATA 6" then
+            item.value = "00000000h"
+            found = true
+        elseif item.name == "HANZ NILAI POINTER" then
+            item.value = "0"
+            found = true
+        elseif item.name == "HANZ NILAI" then
+            item.value = "2"
+            found = true
+        end
+
+        if found then
+            item.freeze = true
+            item.freezeType = gg.FREEZE_NORMAL
+            table.insert(editList, item)
+        end
+    end
+
+    if #editList > 0 then
+        gg.setValues(editList)
+        gg.addListItems(editList)
+        gg.toast("✅ Tropical Airport Berhasil!")
+    end
+end
+
+-- LOGIKA SPACEPORT
+function SPACEPORT_LOGIC()
+    local items = gg.getListItems()
+    
+    if #items == 0 then
+        gg.alert("⚠️ Saved List kosong! Pastikan data sudah disimpan dengan nama yang benar.")
+        return
+    end
+
+    local updateList = {}
+    
+    for i, v in ipairs(items) do
+        if v.name == "HANZ DATA 1" then
+            v.value = 0x696B5324
+            v.freeze = true
+        elseif v.name == "HANZ DATA 2" then
+            v.value = 0x69415F6E
+            v.freeze = true
+        elseif v.name == "HANZ DATA 3" then
+            v.value = 0x726F7072
+            v.freeze = true
+        elseif v.name == "HANZ DATA 4" then
+            v.value = 0x70735F74
+            v.freeze = true
+        elseif v.name == "HANZ DATA 5" then
+            v.value = 0x00656361
+            v.freeze = true
+        elseif v.name == "HANZ DATA 6" then
+            v.value = 0x00000000
+            v.freeze = true
+        elseif v.name == "HANZ NILAI POINTER" then
+            v.value = 0
+            v.freeze = true
+        elseif v.name == "HANZ NILAI" then
+            v.value = 2
+            v.freeze = true
+        end
+        
+        if v.freeze == true then
+            table.insert(updateList, v)
+        end
+    end
+
+    if #updateList > 0 then
+        gg.setValues(updateList)
+        gg.addListItems(updateList)
+        gg.toast("✅ Spaceport: Berhasil mengubah " .. #updateList .. " data.")
+    else
+        gg.toast("⚠️ Tidak ada nama yang cocok di Saved List.")
+    end
+end
+
+-- LOGIKA ROCK AIRPORT
+function ROCK_AIRPORT_LOGIC()
+    local list = gg.getListItems()
+
+    if #list == 0 then
+        gg.alert("Saved List kosong! Silakan tambahkan data ke daftar simpan terlebih dahulu.")
+        return
+    end
+
+    local editList = {}
+    local targetName = ""
+
+    for i, v in ipairs(list) do
+        targetName = v.name
+        
+        if targetName == "HANZ DATA 1" then
+            v.value = "696B5322h"
+            v.freeze = true
+        elseif targetName == "HANZ DATA 2" then
+            v.value = "69415F6Eh"
+            v.freeze = true
+        elseif targetName == "HANZ DATA 3" then
+            v.value = "726F7072h"
+            v.freeze = true
+        elseif targetName == "HANZ DATA 4" then
+            v.value = "6F725F74h"
+            v.freeze = true
+        elseif targetName == "HANZ DATA 5" then
+            v.value = "00006B63h"
+            v.freeze = true
+        elseif targetName == "HANZ DATA 6" then
+            v.value = "00000000h"
+            v.freeze = true
+        elseif targetName == "HANZ NILAI POINTER" then
+            v.value = 0
+            v.freeze = true
+        elseif targetName == "HANZ NILAI" then
+            v.value = 2
+            v.freeze = true
+        end
+        
+        table.insert(editList, v)
+    end
+
+    gg.setValues(editList)
+    gg.addListItems(editList)
+    gg.toast("Data berhasil diubah dan dibekukan!")
+end
+
+-- LOGIKA CINEMA AIRPORT
+function CINEMA_AIRPORT_LOGIC()
+    local items = gg.getListItems()
+    
+    if #items == 0 then
+        gg.alert("Saved List kosong! Pastikan data sudah disimpan sebelumnya.")
+        return
+    end
+
+    local updateList = {}
+    local count = 0
+
+    for i, v in ipairs(items) do
+        local needsUpdate = false
+        
+        if v.name == "HANZ DATA 1" then 
+            v.value = "696B5324h"
+            needsUpdate = true
+        elseif v.name == "HANZ DATA 2" then 
+            v.value = "69415F6Eh"
+            needsUpdate = true
+        elseif v.name == "HANZ DATA 3" then 
+            v.value = "726F7072h"
+            needsUpdate = true
+        elseif v.name == "HANZ DATA 4" then 
+            v.value = "6F6D5F74h"
+            needsUpdate = true
+        elseif v.name == "HANZ DATA 5" then 
+            v.value = "00656976h"
+            needsUpdate = true
+        elseif v.name == "HANZ DATA 6" then 
+            v.value = "0"
+            needsUpdate = true
+        elseif v.name == "HANZ NILAI POINTER" then 
+            v.value = "0"
+            needsUpdate = true
+        elseif v.name == "HANZ NILAI" then 
+            v.value = "2"
+            needsUpdate = true
+        end
+
+        if needsUpdate then
+            v.freeze = true 
+            table.insert(updateList, v)
+            count = count + 1
+        end
+    end
+
+    if #updateList > 0 then
+        gg.setValues(updateList)
+        gg.addListItems(updateList) 
+        gg.toast("Berhasil memperbarui dan membekukan " .. count .. " data.")
+    else
+        gg.toast("Tidak ditemukan nama yang sesuai di Saved List.")
+    end
+end
+
+-- LOGIKA EASTER AIRPORT
+function EASTER_AIRPORT_LOGIC()
+    local items = gg.getListItems()
+    
+    if #items == 0 then
+        gg.alert("Saved List kosong! Pastikan data sudah disimpan sebelumnya.")
+        return
+    end
+
+    local updateList = {}
+    local count = 0
+
+    for i, v in ipairs(items) do
+        local needsUpdate = false
+        
+        if v.name == "HANZ DATA 1" then 
+            v.value = "696B532Eh"
+            needsUpdate = true
+        elseif v.name == "HANZ DATA 2" then 
+            v.value = "69415F6Eh"
+            needsUpdate = true
+        elseif v.name == "HANZ DATA 3" then 
+            v.value = "726F7072h"
+            needsUpdate = true
+        elseif v.name == "HANZ DATA 4" then 
+            v.value = "61655F74h"
+            needsUpdate = true
+        elseif v.name == "HANZ DATA 5" then 
+            v.value = "72657473h"
+            needsUpdate = true
+        elseif v.name == "HANZ DATA 6" then 
+            v.value = "33323032h"
+            needsUpdate = true
+        elseif v.name == "HANZ NILAI POINTER" then 
+            v.value = "0"
+            needsUpdate = true
+        elseif v.name == "HANZ NILAI" then 
+            v.value = "2"
+            needsUpdate = true
+        end
+
+        if needsUpdate then
+            v.freeze = true 
+            table.insert(updateList, v)
+            count = count + 1
+        end
+    end
+
+    if #updateList > 0 then
+        gg.setValues(updateList)
+        gg.addListItems(updateList) 
+        gg.toast("Berhasil memperbarui dan membekukan " .. count .. " data.")
+    else
+        gg.toast("Tidak ditemukan nama yang sesuai di Saved List.")
+    end
+end
+
+-- LOGIKA SUGARY AIRPORT (BARU)
+function SUGARY_AIRPORT_LOGIC()
+    local items = gg.getListItems()
+    
+    if #items == 0 then
+        gg.alert("Saved List kosong! Pastikan data sudah disimpan sebelumnya.")
+        return
+    end
+
+    local updateList = {}
+    local count = 0
+
+    for i, v in ipairs(items) do
+        local needsUpdate = false
+        
+        if v.name == "HANZ DATA 1" then 
+            v.value = "696B5324h"
+            needsUpdate = true
+        elseif v.name == "HANZ DATA 2" then 
+            v.value = "69415F6Eh"
+            needsUpdate = true
+        elseif v.name == "HANZ DATA 3" then 
+            v.value = "726F7072h"
+            needsUpdate = true
+        elseif v.name == "HANZ DATA 4" then 
+            v.value = "77735F74h"
+            needsUpdate = true
+        elseif v.name == "HANZ DATA 5" then 
+            v.value = "00746565h"
+            needsUpdate = true
+        elseif v.name == "HANZ DATA 6" then 
+            v.value = "0"
+            needsUpdate = true
+        elseif v.name == "HANZ NILAI POINTER" then 
+            v.value = "0"
+            needsUpdate = true
+        elseif v.name == "HANZ NILAI" then 
+            v.value = "2"
+            needsUpdate = true
+        end
+
+        if needsUpdate then
+            v.freeze = true 
+            table.insert(updateList, v)
+            count = count + 1
+        end
+    end
+
+    if #updateList > 0 then
+        gg.setValues(updateList)
+        gg.addListItems(updateList) 
+        gg.toast("Berhasil memperbarui dan membekukan " .. count .. " data.")
+    else
+        gg.toast("Tidak ditemukan nama yang sesuai di Saved List.")
+    end
+end
+
+-- LOGIKA LUCK AIRPORT (BARU DENGAN DATA UPDATE)
+function LUCK_AIRPORT_LOGIC()
+    local items = gg.getListItems()
+    if #items == 0 then
+        gg.alert("Saved List kosong! Pastikan data sudah disimpan sebelumnya.")
+        return
+    end
+
+    local updateList = {}
+    local count = 0
+
+    for i, v in ipairs(items) do
+        local needsUpdate = false
+        if v.name == "HANZ DATA 1" then 
+            v.value = "696B5328h"
+            needsUpdate = true
+        elseif v.name == "HANZ DATA 2" then 
+            v.value = "69415F6Eh"
+            needsUpdate = true
+        elseif v.name == "HANZ DATA 3" then 
+            v.value = "726F7072h"
+            needsUpdate = true
+        elseif v.name == "HANZ DATA 4" then 
+            v.value = "72695F74h"
+            needsUpdate = true
+        elseif v.name == "HANZ DATA 5" then 
+            v.value = "6E616C65h"
+            needsUpdate = true
+        elseif v.name == "HANZ DATA 6" then 
+            v.value = "00000064h"
+            needsUpdate = true
+        elseif v.name == "HANZ NILAI POINTER" then 
+            v.value = "0"
+            needsUpdate = true
+        elseif v.name == "HANZ NILAI" then 
+            v.value = "2"
+            needsUpdate = true
+        end
+
+        if needsUpdate then
+            v.freeze = true 
+            table.insert(updateList, v)
+            count = count + 1
+        end
+    end
+
+    if #updateList > 0 then
+        gg.setValues(updateList)
+        gg.addListItems(updateList) 
+        gg.toast("LUCK AIRPORT: Berhasil memperbarui " .. count .. " data.")
+    else
+        gg.toast("Tidak ditemukan nama yang sesuai.")
+    end
+end
+
+-- LOGIKA SECRET BASE (BARU DENGAN DATA UPDATE)
+function SECRET_BASE_LOGIC()
+    local items = gg.getListItems()
+    if #items == 0 then
+        gg.alert("Saved List kosong!")
+        return
+    end
+
+    local updateList = {}
+    local count = 0
+
+    for i, v in ipairs(items) do
+        local needsUpdate = false
+        if v.name == "HANZ DATA 1" then 
+            v.value = "696B5320h"
+            needsUpdate = true
+        elseif v.name == "HANZ DATA 2" then 
+            v.value = "69415F6Eh"
+            needsUpdate = true
+        elseif v.name == "HANZ DATA 3" then 
+            v.value = "726F7072h"
+            needsUpdate = true
+        elseif v.name == "HANZ DATA 4" then 
+            v.value = "70735F74h"
+            needsUpdate = true
+        elseif v.name == "HANZ DATA 5" then 
+            v.value = "00000079h"
+            needsUpdate = true
+        elseif v.name == "HANZ DATA 6" then 
+            v.value = "00000000h"
+            needsUpdate = true
+        elseif v.name == "HANZ NILAI POINTER" then 
+            v.value = "0"
+            needsUpdate = true
+        elseif v.name == "HANZ NILAI" then 
+            v.value = "2"
+            needsUpdate = true
+        end
+
+        if needsUpdate then
+            v.freeze = true 
+            table.insert(updateList, v)
+            count = count + 1
+        end
+    end
+
+    if #updateList > 0 then
+        gg.setValues(updateList)
+        gg.addListItems(updateList) 
+        gg.toast("SECRET BASE: Berhasil memperbarui " .. count .. " data.")
+    end
+end
+
+-- LOGIKA FASHION AIRPORT (BARU DENGAN DATA UPDATE)
+function FASHION_AIRPORT_LOGIC()
+    local items = gg.getListItems()
+    if #items == 0 then
+        gg.alert("Saved List kosong!")
+        return
+    end
+
+    local updateList = {}
+    local count = 0
+
+    for i, v in ipairs(items) do
+        local needsUpdate = false
+        if v.name == "HANZ DATA 1" then 
+            v.value = "696B5328h"
+            needsUpdate = true
+        elseif v.name == "HANZ DATA 2" then 
+            v.value = "69415F6Eh"
+            needsUpdate = true
+        elseif v.name == "HANZ DATA 3" then 
+            v.value = "726F7072h"
+            needsUpdate = true
+        elseif v.name == "HANZ DATA 4" then 
+            v.value = "61665F74h"
+            needsUpdate = true
+        elseif v.name == "HANZ DATA 5" then 
+            v.value = "6F696873h"
+            needsUpdate = true
+        elseif v.name == "HANZ DATA 6" then 
+            v.value = "0000006Eh"
+            needsUpdate = true
+        elseif v.name == "HANZ NILAI POINTER" then 
+            v.value = "0"
+            needsUpdate = true
+        elseif v.name == "HANZ NILAI" then 
+            v.value = "2"
+            needsUpdate = true
+        end
+
+        if needsUpdate then
+            v.freeze = true 
+            table.insert(updateList, v)
+            count = count + 1
+        end
+    end
+
+    if #updateList > 0 then
+        gg.setValues(updateList)
+        gg.addListItems(updateList) 
+        gg.toast("FASHION AIRPORT: Berhasil memperbarui " .. count .. " data.")
+    end
+end
+
+-- LOGIKA ARABIAN AIRPORT (BARU DENGAN DATA UPDATE)
+function ARABIAN_AIRPORT_LOGIC()
+    local items = gg.getListItems()
+    if #items == 0 then
+        gg.alert("Saved List kosong!")
+        return
+    end
+
+    local updateList = {}
+    local count = 0
+
+    for i, v in ipairs(items) do
+        local needsUpdate = false
+        if v.name == "HANZ DATA 1" then 
+            v.value = "696B5322h"
+            needsUpdate = true
+        elseif v.name == "HANZ DATA 2" then 
+            v.value = "69415F6Eh"
+            needsUpdate = true
+        elseif v.name == "HANZ DATA 3" then 
+            v.value = "726F7072h"
+            needsUpdate = true
+        elseif v.name == "HANZ DATA 4" then 
+            v.value = "72615F74h"
+            needsUpdate = true
+        elseif v.name == "HANZ DATA 5" then 
+            v.value = "00006261h"
+            needsUpdate = true
+        elseif v.name == "HANZ DATA 6" then 
+            v.value = "00000000h"
+            needsUpdate = true
+        elseif v.name == "HANZ NILAI POINTER" then 
+            v.value = "0"
+            needsUpdate = true
+        elseif v.name == "HANZ NILAI" then 
+            v.value = "2"
+            needsUpdate = true
+        end
+
+        if needsUpdate then
+            v.freeze = true 
+            table.insert(updateList, v)
+            count = count + 1
+        end
+    end
+
+    if #updateList > 0 then
+        gg.setValues(updateList)
+        gg.addListItems(updateList) 
+        gg.toast("ARABIAN AIRPORT: Berhasil memperbarui " .. count .. " data.")
+    end
+end
+
+-- MENU UTAMA
+function HOME()
+  menu = gg.choice({
+    "1. AERIAL PORTAL",
+    "2. FESTIVAL AIRPORT",
+    "3. TROPICAL AIRPORT",
+    "4. SPACEPORT",
+    "5. ROCK AIRPORT",
+    "6. CINEMA AIRPORT",
+    "7. EASTER AIRPORT",
+    "8. SUGARY AIRPORT", 
+    "9. LUCK AIRPORT",
+    "10. SECRET BASE",
+    "11. FASHION AIRPORT",
+    "12. ARABIAN AIRPORT",
+    "13. NEXT UPDATE",
+    "14. KELUAR"
+  }, nil, "AIRPORT SKIN MENU")
+
+  if menu == 1 then 
+    AERIAL_PORTAL_LOGIC() 
+  elseif menu == 2 then 
+    FESTIVAL_AIRPORT_LOGIC()
+  elseif menu == 3 then 
+    TROPICAL_AIRPORT_LOGIC()
+  elseif menu == 4 then 
+    SPACEPORT_LOGIC() 
+  elseif menu == 5 then 
+    ROCK_AIRPORT_LOGIC()
+  elseif menu == 6 then 
+    CINEMA_AIRPORT_LOGIC()
+  elseif menu == 7 then 
+    EASTER_AIRPORT_LOGIC()
+  elseif menu == 8 then 
+    SUGARY_AIRPORT_LOGIC() 
+  elseif menu == 9 then 
+    LUCK_AIRPORT_LOGIC()
+  elseif menu == 10 then 
+    SECRET_BASE_LOGIC()
+  elseif menu == 11 then 
+    FASHION_AIRPORT_LOGIC()
+  elseif menu == 12 then 
+    ARABIAN_AIRPORT_LOGIC()
+  elseif menu == 13 then
+    gg.alert("Menu ini akan di update secara bertahap")
+  elseif menu == 14 then
+    os.exit()
+  end
+  X = -1
+end
+
+-- EKSEKUSI AWAL
+loading()
+X = 1
+while true do
+  if gg.isVisible(true) then
+    X = 1
+    gg.setVisible(false)
+  end
+  if X == 1 then
+    HOME()
+  end
+end
