@@ -1,0 +1,280 @@
+-- HANZ LOADER - TOWNSHIP EDITION
+-- STATUS: 100% LOGIKA TERPISAH PER MENU
+
+local function LoadingEffect(msg, duration)
+    local frames = {"┏", "┳", "┓", "┣", "╋", "┫", "┗", "┻", "┛"}
+    for i = 1, duration do
+        for _, frame in ipairs(frames) do
+            gg.toast(frame .. " " .. msg .. " " .. frame)
+            gg.sleep(50)
+        end
+    end
+end
+
+local function ExitEffect()
+    local bars = {"█▒▒▒▒▒▒▒▒▒", "███▒▒▒▒▒▒▒", "█████▒▒▒▒▒", "███████▒▒▒", "██████████"}
+    for _, bar in ipairs(bars) do
+        gg.toast("EXITING: " .. bar)
+        gg.sleep(200)
+    end
+    print("HANZ SCRIPT CLOSED")
+    os.exit()
+end
+
+-- ==========================================
+-- LOGIKA TERPISAH TIAP MENU (SILAHKAN ISI VALUE)
+-- ==========================================
+
+function MENU_1() -- MEGA PLANE
+    local items = gg.getListItems()
+    local updateList = {}
+    for i, v in ipairs(items) do
+        local update = false
+        if v.name == "HANZ DATA 1" then v.value = "696B5322h"; update = true
+        elseif v.name == "HANZ DATA 2" then v.value = "69415F6Eh"; update = true
+        elseif v.name == "HANZ DATA 3" then v.value = "616C7072h"; update = true
+        elseif v.name == "HANZ DATA 4" then v.value = "535F656Eh"; update = true
+        elseif v.name == "HANZ DATA 5" then v.value = "00003350h"; update = true
+        elseif v.name == "HANZ DATA 6" then v.value = "00000000"; update = true
+        elseif v.name == "HANZ NILAI POINTER" then v.value = "0"; update = true
+        elseif v.name == "HANZ NILAI" then v.value = "2"; update = true end
+        if update then v.freeze = true; table.insert(updateList, v) end
+    end
+    gg.setValues(updateList); gg.addListItems(updateList); gg.toast("MEGA PLANE AKTIF")
+end
+
+function MENU_2() -- SUPER SONIC DRAGON
+    local items = gg.getListItems()
+    local updateList = {}
+    for i, v in ipairs(items) do
+        local update = false
+        if v.name == "HANZ DATA 1" then v.value = "696B5326h"; update = true
+        elseif v.name == "HANZ DATA 2" then v.value = "69415F6Eh"; update = true
+        elseif v.name == "HANZ DATA 3" then v.value = "616C7072h"; update = true
+        elseif v.name == "HANZ DATA 4" then v.value = "535F656Eh"; update = true
+        elseif v.name == "HANZ DATA 5" then v.value = "323A3750h"; update = true
+        elseif v.name == "HANZ DATA 6" then v.value = "00000000"; update = true
+        elseif v.name == "HANZ NILAI POINTER" then v.value = "0"; update = true
+        elseif v.name == "HANZ NILAI" then v.value = "2"; update = true end
+        if update then v.freeze = true; table.insert(updateList, v) end
+    end
+    gg.setValues(updateList); gg.addListItems(updateList); gg.toast("SUPER SONIC DRAGON AKTIF")
+end
+
+function MENU_3() -- LAUNCH VEHICLE
+    local items = gg.getListItems()
+    local updateList = {}
+    for i, v in ipairs(items) do
+        local update = false
+        if v.name == "HANZ DATA 1" then v.value = "696B5326h"; update = true
+        elseif v.name == "HANZ DATA 2" then v.value = "69415F6Eh"; update = true
+        elseif v.name == "HANZ DATA 3" then v.value = "616C7072h"; update = true
+        elseif v.name == "HANZ DATA 4" then v.value = "735F656Eh"; update = true
+        elseif v.name == "HANZ DATA 5" then v.value = "65636170h"; update = true
+        elseif v.name == "HANZ DATA 6" then v.value = "00000000"; update = true
+        elseif v.name == "HANZ NILAI POINTER" then v.value = "0"; update = true
+        elseif v.name == "HANZ NILAI" then v.value = "2"; update = true end
+        if update then v.freeze = true; table.insert(updateList, v) end
+    end
+    gg.setValues(updateList); gg.addListItems(updateList); gg.toast("LAUNCH VEHICLE AKTIF")
+end
+
+function MENU_4() -- ROCK PLANE
+    local items = gg.getListItems()
+    local updateList = {}
+    for i, v in ipairs(items) do
+        local update = false
+        if v.name == "HANZ DATA 1" then v.value = "696B5324h"; update = true
+        elseif v.name == "HANZ DATA 2" then v.value = "69415F6Eh"; update = true
+        elseif v.name == "HANZ DATA 3" then v.value = "616C7072h"; update = true
+        elseif v.name == "HANZ DATA 4" then v.value = "725F656Eh"; update = true
+        elseif v.name == "HANZ DATA 5" then v.value = "006B636Fh"; update = true
+        elseif v.name == "HANZ DATA 6" then v.value = "00000000"; update = true
+        elseif v.name == "HANZ NILAI POINTER" then v.value = "0"; update = true
+        elseif v.name == "HANZ NILAI" then v.value = "2"; update = true end
+        if update then v.freeze = true; table.insert(updateList, v) end
+    end
+    gg.setValues(updateList); gg.addListItems(updateList); gg.toast("ROCK PLANE AKTIF")
+end
+
+function MENU_5() -- A-LISTER JET
+    local items = gg.getListItems()
+    local updateList = {}
+    for i, v in ipairs(items) do
+        local update = false
+        if v.name == "HANZ DATA 1" then v.value = "696B5326h"; update = true
+        elseif v.name == "HANZ DATA 2" then v.value = "69415F6Eh"; update = true
+        elseif v.name == "HANZ DATA 3" then v.value = "616C7072h"; update = true
+        elseif v.name == "HANZ DATA 4" then v.value = "6D5F656Eh"; update = true
+        elseif v.name == "HANZ DATA 5" then v.value = "6569766Fh"; update = true
+        elseif v.name == "HANZ DATA 6" then v.value = "00000000"; update = true
+        elseif v.name == "HANZ NILAI POINTER" then v.value = "0"; update = true
+        elseif v.name == "HANZ NILAI" then v.value = "2"; update = true end
+        if update then v.freeze = true; table.insert(updateList, v) end
+    end
+    gg.setValues(updateList); gg.addListItems(updateList); gg.toast("A-LISTER JET AKTIF")
+end
+
+function MENU_6() -- ECLAIR PLANE
+    local items = gg.getListItems()
+    local updateList = {}
+    for i, v in ipairs(items) do
+        local update = false
+        if v.name == "HANZ DATA 1" then v.value = "696B5326h"; update = true
+        elseif v.name == "HANZ DATA 2" then v.value = "69415F6Eh"; update = true
+        elseif v.name == "HANZ DATA 3" then v.value = "616C7072h"; update = true
+        elseif v.name == "HANZ DATA 4" then v.value = "735F656Eh"; update = true
+        elseif v.name == "HANZ DATA 5" then v.value = "74656577h"; update = true
+        elseif v.name == "HANZ DATA 6" then v.value = "00000000"; update = true
+        elseif v.name == "HANZ NILAI POINTER" then v.value = "0"; update = true
+        elseif v.name == "HANZ NILAI" then v.value = "2"; update = true end
+        if update then v.freeze = true; table.insert(updateList, v) end
+    end
+    gg.setValues(updateList); gg.addListItems(updateList); gg.toast("ECLAIR PLANE AKTIF")
+end
+
+function MENU_7() -- LUCK JET
+    local items = gg.getListItems()
+    local updateList = {}
+    for i, v in ipairs(items) do
+        local update = false
+        if v.name == "HANZ DATA 1" then v.value = "696B532Ah"; update = true
+        elseif v.name == "HANZ DATA 2" then v.value = "69415F6Eh"; update = true
+        elseif v.name == "HANZ DATA 3" then v.value = "616C7072h"; update = true
+        elseif v.name == "HANZ DATA 4" then v.value = "695F656Eh"; update = true
+        elseif v.name == "HANZ DATA 5" then v.value = "616C6572h"; update = true
+        elseif v.name == "HANZ DATA 6" then v.value = "0000646Eh"; update = true
+        elseif v.name == "HANZ NILAI POINTER" then v.value = "0"; update = true
+        elseif v.name == "HANZ NILAI" then v.value = "2"; update = true end
+        if update then v.freeze = true; table.insert(updateList, v) end
+    end
+    gg.setValues(updateList); gg.addListItems(updateList); gg.toast("LUCK JET AKTIF")
+end
+
+function MENU_8() -- STEALTH AIRCAFT
+    local items = gg.getListItems()
+    local updateList = {}
+    for i, v in ipairs(items) do
+        local update = false
+        if v.name == "HANZ DATA 1" then v.value = "696B5322h"; update = true
+        elseif v.name == "HANZ DATA 2" then v.value = "69415F6Eh"; update = true
+        elseif v.name == "HANZ DATA 3" then v.value = "616C7072h"; update = true
+        elseif v.name == "HANZ DATA 4" then v.value = "735F656Eh"; update = true
+        elseif v.name == "HANZ DATA 5" then v.value = "00007970h"; update = true
+        elseif v.name == "HANZ DATA 6" then v.value = "00000000"; update = true
+        elseif v.name == "HANZ NILAI POINTER" then v.value = "0"; update = true
+        elseif v.name == "HANZ NILAI" then v.value = "2"; update = true end
+        if update then v.freeze = true; table.insert(updateList, v) end
+    end
+    gg.setValues(updateList); gg.addListItems(updateList); gg.toast("STEALTH AIRCAFT AKTIF")
+end
+
+function MENU_9() -- ARABIAN PLANE
+    local items = gg.getListItems()
+    local updateList = {}
+    for i, v in ipairs(items) do
+        local update = false
+        if v.name == "HANZ DATA 1" then v.value = "696B5324h"; update = true
+        elseif v.name == "HANZ DATA 2" then v.value = "69415F6Eh"; update = true
+        elseif v.name == "HANZ DATA 3" then v.value = "616C7072h"; update = true
+        elseif v.name == "HANZ DATA 4" then v.value = "615F656Eh"; update = true
+        elseif v.name == "HANZ DATA 5" then v.value = "00626172h"; update = true
+        elseif v.name == "HANZ DATA 6" then v.value = "00000000"; update = true
+        elseif v.name == "HANZ NILAI POINTER" then v.value = "0"; update = true
+        elseif v.name == "HANZ NILAI" then v.value = "2"; update = true end
+        if update then v.freeze = true; table.insert(updateList, v) end
+    end
+    gg.setValues(updateList); gg.addListItems(updateList); gg.toast("ARABIAN PLANE AKTIF")
+end
+
+function MENU_10() -- FASHION PLANE
+    local items = gg.getListItems()
+    local updateList = {}
+    for i, v in ipairs(items) do
+        local update = false
+        if v.name == "HANZ DATA 1" then v.value = "696B532Ah"; update = true
+        elseif v.name == "HANZ DATA 2" then v.value = "69415F6Eh"; update = true
+        elseif v.name == "HANZ DATA 3" then v.value = "616C7072h"; update = true
+        elseif v.name == "HANZ DATA 4" then v.value = "665F656Eh"; update = true
+        elseif v.name == "HANZ DATA 5" then v.value = "69687361h"; update = true
+        elseif v.name == "HANZ DATA 6" then v.value = "00006E6Fh"; update = true
+        elseif v.name == "HANZ NILAI POINTER" then v.value = "0"; update = true
+        elseif v.name == "HANZ NILAI" then v.value = "2"; update = true end
+        if update then v.freeze = true; table.insert(updateList, v) end
+    end
+    gg.setValues(updateList); gg.addListItems(updateList); gg.toast("FASHION PLANE AKTIF")
+end
+
+function MENU_11() -- TROPICAL PLANE
+    local items = gg.getListItems()
+    local updateList = {}
+    for i, v in ipairs(items) do
+        local update = false
+        if v.name == "HANZ DATA 1" then v.value = "696B5322h"; update = true
+        elseif v.name == "HANZ DATA 2" then v.value = "69415F6Eh"; update = true
+        elseif v.name == "HANZ DATA 3" then v.value = "616C7072h"; update = true
+        elseif v.name == "HANZ DATA 4" then v.value = "535F656Eh"; update = true
+        elseif v.name == "HANZ DATA 5" then v.value = "00003950h"; update = true
+        elseif v.name == "HANZ DATA 6" then v.value = "00000000"; update = true
+        elseif v.name == "HANZ NILAI POINTER" then v.value = "0"; update = true
+        elseif v.name == "HANZ NILAI" then v.value = "2"; update = true end
+        if update then v.freeze = true; table.insert(updateList, v) end
+    end
+    gg.setValues(updateList); gg.addListItems(updateList); gg.toast("TROPICAL PLANE AKTIF")
+end
+
+-- ==========================================
+-- TAMPILAN MENU UTAMA
+-- ==========================================
+
+function MainMenu()
+    local tanggal = os.date("%d-%m-%Y")
+    local jam = os.date("%H:%M:%S")
+    local angkaAcak = math.random(100000, 999999)
+    
+    local header = "["..tanggal.."]\n["..jam.."]\n["..angkaAcak.."]\nHANZ\nGAME:TOWNSHIP"
+
+    local menu = gg.choice({
+        "1. MEGA PLANE",
+        "2. SUPER SONIC DRAGON",
+        "3. LAUNCH VEHICLE",
+        "4. ROCK PLANE",
+        "5. A-LISTER JET",
+        "6. ECLAIR PLANE",
+        "7. LUCK JET",
+        "8. STEALTH AIRCAFT",
+        "9. ARABIAN PLANE",
+        "10. FASHION PLANE",
+        "11. TROPICAL PLANE",
+        "12. KELUAR"
+    }, nil, header)
+
+    if menu == 1 then MENU_1()
+    elseif menu == 2 then MENU_2()
+    elseif menu == 3 then MENU_3()
+    elseif menu == 4 then MENU_4()
+    elseif menu == 5 then MENU_5()
+    elseif menu == 6 then MENU_6()
+    elseif menu == 7 then MENU_7()
+    elseif menu == 8 then MENU_8()
+    elseif menu == 9 then MENU_9()
+    elseif menu == 10 then MENU_10()
+    elseif menu == 11 then MENU_11()
+    elseif menu == 12 then ExitEffect() end
+    
+    gg.clearResults() 
+end
+
+-- ==========================================
+-- SISTEM AUTO RUN
+-- ==========================================
+
+LoadingEffect("HANZ", 3)
+while true do
+    if gg.isVisible(true) then
+        gg.setVisible(false)
+        MainMenu()
+    end
+    gg.sleep(100)
+end
+
