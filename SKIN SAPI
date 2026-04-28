@@ -1,0 +1,587 @@
+-- HANZ PROJECT
+-- GAME: TOWNSHIP
+-- DEV: HANZ
+
+gg.clearResults()
+
+-- FUNGSI EFEK LOADING COOL
+function _LOADING()
+    gg.toast("⭐ HANZ PROJECT LOADING ⭐")
+    gg.sleep(200)
+    gg.toast("SHARING DATA [▓▒▒▒▒▒▒▒▒▒] 10%")
+    gg.sleep(150)
+    gg.toast("COLLECTING ASSETS [▓▓▓▒▒▒▒▒▒▒] 30%")
+    gg.sleep(150)
+    gg.toast("INJECTING LOGIC [▓▓▓▓▓▓▒▒▒▒] 60%")
+    gg.sleep(150)
+    gg.toast("BYPASS SECURITY [▓▓▓▓▓▓▓▓▓▒] 90%")
+    gg.sleep(150)
+    gg.toast("COMPLETED [▓▓▓▓▓▓▓▓▓▓] 100%")
+    gg.sleep(200)
+end
+
+_LOADING()
+
+-- FUNGSI UTAMA LOOPING MENU
+function HOME()
+    -- Ambil Waktu & Tanggal Akurat
+    local TANGGAL = os.date("%d %B %Y")
+    local JAM = os.date("%H:%M:%S")
+    
+    local MENU_HANZ = gg.choice({
+        "1. 🎬 CINEMA COW",
+        "2. 🧝 ELF COW",
+        "3. 😘 FLIRTY COW",
+        "4. 🚀 ASTRONOUS COW",
+        "5. 🎂 BIRTHDAY COW",
+        "6. 🧁 CONFECTIONER COW",
+        "7. 🥳 PARTY COW",
+        "8. 🧛 MOO-SFERATU COW",
+        "9. 🏔️ ALPINE COW",
+        "10. 🏛️ CEREMONIAL COW",
+        "11. 🐣 EASTER COW",
+        "12. 🕵️ SPY COW",
+        "13. 🔱 QUEEN OF ATLANTIS",
+        "14. 💃 STAYLIST COW",
+        "15. 🎄 FESTIVE COW",
+        "16. 🏴‍☠️ CORSAIR COW",
+        "17. ❄️ ARTIC COW",
+        "18. 🥖 FRENCH COW",
+        "19. 🎸 ROCK N ROLL COW",
+        "20. 🎻 SYMPHONY COW",
+        "21. ⛩️ JAPANESE COW",
+        "22. 👳 ARABIAN COW",
+        "23. 🌸 FLOWER COW",
+        "24. 🌮 MEXICAN COW",
+        "25. 🌟 CELEBRITY COW",
+        "❌ KELUAR / EXIT"
+    }, nil, "📅 TANGGAL : " .. TANGGAL .. "\n⏰ JAM : " .. JAM .. "\n🎮 GAME : TOWNSHIP\n👤 DEV : HANZ\n🐮 MENU : SKIN SAPI/COW")
+
+    if MENU_HANZ == nil then
+        -- Jika klik luar atau batal, menu hanya sembunyi
+        gg.toast("Script Sembunyi (Klik ikon GG untuk buka)")
+    else
+        if MENU_HANZ == 1 then L1() end
+        if MENU_HANZ == 2 then L2() end
+        if MENU_HANZ == 3 then L3() end
+        if MENU_HANZ == 4 then L4() end
+        if MENU_HANZ == 5 then L5() end
+        if MENU_HANZ == 6 then L6() end
+        if MENU_HANZ == 7 then L7() end
+        if MENU_HANZ == 8 then L8() end
+        if MENU_HANZ == 9 then L9() end
+        if MENU_HANZ == 10 then L10() end
+        if MENU_HANZ == 11 then L11() end
+        if MENU_HANZ == 12 then L12() end
+        if MENU_HANZ == 13 then L13() end
+        if MENU_HANZ == 14 then L14() end
+        if MENU_HANZ == 15 then L15() end
+        if MENU_HANZ == 16 then L16() end
+        if MENU_HANZ == 17 then L17() end
+        if MENU_HANZ == 18 then L18() end
+        if MENU_HANZ == 19 then L19() end
+        if MENU_HANZ == 20 then L20() end
+        if MENU_HANZ == 21 then L21() end
+        if MENU_HANZ == 22 then L22() end
+        if MENU_HANZ == 23 then L23() end
+        if MENU_HANZ == 24 then L24() end
+        if MENU_HANZ == 25 then L25() end
+        if MENU_HANZ == 26 then EXIT() end
+    end
+    -- Reset visibility agar otomatis muncul kembali saat ikon diklik
+    PUB_VISIBLE = -1
+end
+
+-- LOGIKA TERPISAH SETIAP MENU (REDUNDANT SESUAI PERMINTAAN)
+
+function L1()
+    local items = gg.getListItems()
+    local updateList = {}
+    local count = 0
+    for i, v in ipairs(items) do
+        local needsUpdate = false
+        if v.name == "HANZ DATA 1" then v.value = "696B531Ch" needsUpdate = true
+        elseif v.name == "HANZ DATA 2" then v.value = "6F435F6Eh" needsUpdate = true
+        elseif v.name == "HANZ DATA 3" then v.value = "6F6D5F77h" needsUpdate = true
+        elseif v.name == "HANZ DATA 4" then v.value = "00656976h" needsUpdate = true
+        elseif v.name == "HANZ DATA 5" then v.value = "00000000h" needsUpdate = true
+        elseif v.name == "HANZ DATA 6" then v.value = "00000000h" needsUpdate = true
+        elseif v.name == "HANZ NILAI POINTER" then v.value = "0" needsUpdate = true
+        elseif v.name == "HANZ NILAI" then v.value = "2" needsUpdate = true end
+        if needsUpdate then v.freeze = true table.insert(updateList, v) count = count + 1 end
+    end
+    if #updateList > 0 then gg.setValues(updateList) gg.addListItems(updateList) gg.toast("Berhasil memproses Menu 1") else gg.toast("Saved List Kosong!") end
+end
+
+function L2()
+    local items = gg.getListItems()
+    local updateList = {}
+    local count = 0
+    for i, v in ipairs(items) do
+        local needsUpdate = false
+        if v.name == "HANZ DATA 1" then v.value = "696B532Ch" needsUpdate = true
+        elseif v.name == "HANZ DATA 2" then v.value = "6F435F6Eh" needsUpdate = true
+        elseif v.name == "HANZ DATA 3" then v.value = "68635F77h" needsUpdate = true
+        elseif v.name == "HANZ DATA 4" then v.value = "74736972h" needsUpdate = true
+        elseif v.name == "HANZ DATA 5" then v.value = "3273616Dh" needsUpdate = true
+        elseif v.name == "HANZ DATA 6" then v.value = "00323230h" needsUpdate = true
+        elseif v.name == "HANZ NILAI POINTER" then v.value = "0" needsUpdate = true
+        elseif v.name == "HANZ NILAI" then v.value = "2" needsUpdate = true end
+        if needsUpdate then v.freeze = true table.insert(updateList, v) count = count + 1 end
+    end
+    if #updateList > 0 then gg.setValues(updateList) gg.addListItems(updateList) gg.toast("Berhasil memproses Menu 2") else gg.toast("Saved List Kosong!") end
+end
+
+function L3()
+    local items = gg.getListItems()
+    local updateList = {}
+    local count = 0
+    for i, v in ipairs(items) do
+        local needsUpdate = false
+        if v.name == "HANZ DATA 1" then v.value = "696B5324h" needsUpdate = true
+        elseif v.name == "HANZ DATA 2" then v.value = "6F435F6Eh" needsUpdate = true
+        elseif v.name == "HANZ DATA 3" then v.value = "61765F77h" needsUpdate = true
+        elseif v.name == "HANZ DATA 4" then v.value = "746E656Ch" needsUpdate = true
+        elseif v.name == "HANZ DATA 5" then v.value = "00656E69h" needsUpdate = true
+        elseif v.name == "HANZ DATA 6" then v.value = "00000000h" needsUpdate = true
+        elseif v.name == "HANZ NILAI POINTER" then v.value = "0" needsUpdate = true
+        elseif v.name == "HANZ NILAI" then v.value = "2" needsUpdate = true end
+        if needsUpdate then v.freeze = true table.insert(updateList, v) count = count + 1 end
+    end
+    if #updateList > 0 then gg.setValues(updateList) gg.addListItems(updateList) gg.toast("Berhasil memproses Menu 3") else gg.toast("Saved List Kosong!") end
+end
+
+function L4()
+    local items = gg.getListItems()
+    local updateList = {}
+    local count = 0
+    for i, v in ipairs(items) do
+        local needsUpdate = false
+        if v.name == "HANZ DATA 1" then v.value = "696B531Ah" needsUpdate = true
+        elseif v.name == "HANZ DATA 2" then v.value = "6F435F6Eh" needsUpdate = true
+        elseif v.name == "HANZ DATA 3" then v.value = "616D5F77h" needsUpdate = true
+        elseif v.name == "HANZ DATA 4" then v.value = "00007372h" needsUpdate = true
+        elseif v.name == "HANZ DATA 5" then v.value = "00000000h" needsUpdate = true
+        elseif v.name == "HANZ DATA 6" then v.value = "00000000h" needsUpdate = true
+        elseif v.name == "HANZ NILAI POINTER" then v.value = "0" needsUpdate = true
+        elseif v.name == "HANZ NILAI" then v.value = "2" needsUpdate = true end
+        if needsUpdate then v.freeze = true table.insert(updateList, v) count = count + 1 end
+    end
+    if #updateList > 0 then gg.setValues(updateList) gg.addListItems(updateList) gg.toast("Berhasil memproses Menu 4") else gg.toast("Saved List Kosong!") end
+end
+
+function L5()
+    local items = gg.getListItems()
+    local updateList = {}
+    local count = 0
+    for i, v in ipairs(items) do
+        local needsUpdate = false
+        if v.name == "HANZ DATA 1" then v.value = "696B531Ch" needsUpdate = true
+        elseif v.name == "HANZ DATA 2" then v.value = "6F435F6Eh" needsUpdate = true
+        elseif v.name == "HANZ DATA 3" then v.value = "77735F77h" needsUpdate = true
+        elseif v.name == "HANZ DATA 4" then v.value = "00746565h" needsUpdate = true
+        elseif v.name == "HANZ DATA 5" then v.value = "00000000h" needsUpdate = true
+        elseif v.name == "HANZ DATA 6" then v.value = "00000000h" needsUpdate = true
+        elseif v.name == "HANZ NILAI POINTER" then v.value = "0" needsUpdate = true
+        elseif v.name == "HANZ NILAI" then v.value = "2" needsUpdate = true end
+        if needsUpdate then v.freeze = true table.insert(updateList, v) count = count + 1 end
+    end
+    if #updateList > 0 then gg.setValues(updateList) gg.addListItems(updateList) gg.toast("Berhasil memproses Menu 5") else gg.toast("Saved List Kosong!") end
+end
+
+function L6()
+    local items = gg.getListItems()
+    local updateList = {}
+    local count = 0
+    for i, v in ipairs(items) do
+        local needsUpdate = false
+        if v.name == "HANZ DATA 1" then v.value = "696B531Eh" needsUpdate = true
+        elseif v.name == "HANZ DATA 2" then v.value = "6F435F6Eh" needsUpdate = true
+        elseif v.name == "HANZ DATA 3" then v.value = "77735F77h" needsUpdate = true
+        elseif v.name == "HANZ DATA 4" then v.value = "32746565h" needsUpdate = true
+        elseif v.name == "HANZ DATA 5" then v.value = "00000000h" needsUpdate = true
+        elseif v.name == "HANZ DATA 6" then v.value = "00000000h" needsUpdate = true
+        elseif v.name == "HANZ NILAI POINTER" then v.value = "0" needsUpdate = true
+        elseif v.name == "HANZ NILAI" then v.value = "2" needsUpdate = true end
+        if needsUpdate then v.freeze = true table.insert(updateList, v) count = count + 1 end
+    end
+    if #updateList > 0 then gg.setValues(updateList) gg.addListItems(updateList) gg.toast("Berhasil memproses Menu 6") else gg.toast("Saved List Kosong!") end
+end
+
+function L7()
+    local items = gg.getListItems()
+    local updateList = {}
+    local count = 0
+    for i, v in ipairs(items) do
+        local needsUpdate = false
+        if v.name == "HANZ DATA 1" then v.value = "696B5322h" needsUpdate = true
+        elseif v.name == "HANZ DATA 2" then v.value = "6F435F6Eh" needsUpdate = true
+        elseif v.name == "HANZ DATA 3" then v.value = "69625F77h" needsUpdate = true
+        elseif v.name == "HANZ DATA 4" then v.value = "64687472h" needsUpdate = true
+        elseif v.name == "HANZ DATA 5" then v.value = "00007961h" needsUpdate = true
+        elseif v.name == "HANZ DATA 6" then v.value = "00000000h" needsUpdate = true
+        elseif v.name == "HANZ NILAI POINTER" then v.value = "0" needsUpdate = true
+        elseif v.name == "HANZ NILAI" then v.value = "2" needsUpdate = true end
+        if needsUpdate then v.freeze = true table.insert(updateList, v) count = count + 1 end
+    end
+    if #updateList > 0 then gg.setValues(updateList) gg.addListItems(updateList) gg.toast("Berhasil memproses Menu 7") else gg.toast("Saved List Kosong!") end
+end
+
+function L8()
+    local items = gg.getListItems()
+    local updateList = {}
+    local count = 0
+    for i, v in ipairs(items) do
+        local needsUpdate = false
+        if v.name == "HANZ DATA 1" then v.value = "696B532Ch" needsUpdate = true
+        elseif v.name == "HANZ DATA 2" then v.value = "6F435F6Eh" needsUpdate = true
+        elseif v.name == "HANZ DATA 3" then v.value = "61685F77h" needsUpdate = true
+        elseif v.name == "HANZ DATA 4" then v.value = "776F6C6Ch" needsUpdate = true
+        elseif v.name == "HANZ DATA 5" then v.value = "326E6565h" needsUpdate = true
+        elseif v.name == "HANZ DATA 6" then v.value = "00333230h" needsUpdate = true
+        elseif v.name == "HANZ NILAI POINTER" then v.value = "0" needsUpdate = true
+        elseif v.name == "HANZ NILAI" then v.value = "2" needsUpdate = true end
+        if needsUpdate then v.freeze = true table.insert(updateList, v) count = count + 1 end
+    end
+    if #updateList > 0 then gg.setValues(updateList) gg.addListItems(updateList) gg.toast("Berhasil memproses Menu 8") else gg.toast("Saved List Kosong!") end
+end
+
+function L9()
+    local items = gg.getListItems()
+    local updateList = {}
+    local count = 0
+    for i, v in ipairs(items) do
+        local needsUpdate = false
+        if v.name == "HANZ DATA 1" then v.value = "696B5328h" needsUpdate = true
+        elseif v.name == "HANZ DATA 2" then v.value = "6F435F6Eh" needsUpdate = true
+        elseif v.name == "HANZ DATA 3" then v.value = "69775F77h" needsUpdate = true
+        elseif v.name == "HANZ DATA 4" then v.value = "7265746Eh" needsUpdate = true
+        elseif v.name == "HANZ DATA 5" then v.value = "726F7053h" needsUpdate = true
+        elseif v.name == "HANZ DATA 6" then v.value = "00000074h" needsUpdate = true
+        elseif v.name == "HANZ NILAI POINTER" then v.value = "0" needsUpdate = true
+        elseif v.name == "HANZ NILAI" then v.value = "2" needsUpdate = true end
+        if needsUpdate then v.freeze = true table.insert(updateList, v) count = count + 1 end
+    end
+    if #updateList > 0 then gg.setValues(updateList) gg.addListItems(updateList) gg.toast("Berhasil memproses Menu 9") else gg.toast("Saved List Kosong!") end
+end
+
+function L10()
+    local items = gg.getListItems()
+    local updateList = {}
+    local count = 0
+    for i, v in ipairs(items) do
+        local needsUpdate = false
+        if v.name == "HANZ DATA 1" then v.value = "696B5318h" needsUpdate = true
+        elseif v.name == "HANZ DATA 2" then v.value = "6F435F6Eh" needsUpdate = true
+        elseif v.name == "HANZ DATA 3" then v.value = "4E435F77h" needsUpdate = true
+        elseif v.name == "HANZ DATA 4" then v.value = "00000059h" needsUpdate = true
+        elseif v.name == "HANZ DATA 5" then v.value = "00000000h" needsUpdate = true
+        elseif v.name == "HANZ DATA 6" then v.value = "00000000h" needsUpdate = true
+        elseif v.name == "HANZ NILAI POINTER" then v.value = "0" needsUpdate = true
+        elseif v.name == "HANZ NILAI" then v.value = "2" needsUpdate = true end
+        if needsUpdate then v.freeze = true table.insert(updateList, v) count = count + 1 end
+    end
+    if #updateList > 0 then gg.setValues(updateList) gg.addListItems(updateList) gg.toast("Berhasil memproses Menu 10") else gg.toast("Saved List Kosong!") end
+end
+
+function L11()
+    local items = gg.getListItems()
+    local updateList = {}
+    local count = 0
+    for i, v in ipairs(items) do
+        local needsUpdate = false
+        if v.name == "HANZ DATA 1" then v.value = "696B5326h" needsUpdate = true
+        elseif v.name == "HANZ DATA 2" then v.value = "6F435F6Eh" needsUpdate = true
+        elseif v.name == "HANZ DATA 3" then v.value = "61655F77h" needsUpdate = true
+        elseif v.name == "HANZ DATA 4" then v.value = "7265746Eh" needsUpdate = true
+        elseif v.name == "HANZ DATA 5" then v.value = "34323032h" needsUpdate = true
+        elseif v.name == "HANZ DATA 6" then v.value = "00000000h" needsUpdate = true
+        elseif v.name == "HANZ NILAI POINTER" then v.value = "0" needsUpdate = true
+        elseif v.name == "HANZ NILAI" then v.value = "2" needsUpdate = true end
+        if needsUpdate then v.freeze = true table.insert(updateList, v) count = count + 1 end
+    end
+    if #updateList > 0 then gg.setValues(updateList) gg.addListItems(updateList) gg.toast("Berhasil memproses Menu 11") else gg.toast("Saved List Kosong!") end
+end
+
+function L12()
+    local items = gg.getListItems()
+    local updateList = {}
+    local count = 0
+    for i, v in ipairs(items) do
+        local needsUpdate = false
+        if v.name == "HANZ DATA 1" then v.value = "696B5318h" needsUpdate = true
+        elseif v.name == "HANZ DATA 2" then v.value = "6F435F6Eh" needsUpdate = true
+        elseif v.name == "HANZ DATA 3" then v.value = "70735F77h" needsUpdate = true
+        elseif v.name == "HANZ DATA 4" then v.value = "00000079h" needsUpdate = true
+        elseif v.name == "HANZ DATA 5" then v.value = "00000000h" needsUpdate = true
+        elseif v.name == "HANZ DATA 6" then v.value = "00000000h" needsUpdate = true
+        elseif v.name == "HANZ NILAI POINTER" then v.value = "0" needsUpdate = true
+        elseif v.name == "HANZ NILAI" then v.value = "2" needsUpdate = true end
+        if needsUpdate then v.freeze = true table.insert(updateList, v) count = count + 1 end
+    end
+    if #updateList > 0 then gg.setValues(updateList) gg.addListItems(updateList) gg.toast("Berhasil memproses Menu 12") else gg.toast("Saved List Kosong!") end
+end
+
+function L13()
+    local items = gg.getListItems()
+    local updateList = {}
+    local count = 0
+    for i, v in ipairs(items) do
+        local needsUpdate = false
+        if v.name == "HANZ DATA 1" then v.value = "696B5322h" needsUpdate = true
+        elseif v.name == "HANZ DATA 2" then v.value = "6F435F6Eh" needsUpdate = true
+        elseif v.name == "HANZ DATA 3" then v.value = "74615F77h" needsUpdate = true
+        elseif v.name == "HANZ DATA 4" then v.value = "746E616Ch" needsUpdate = true
+        elseif v.name == "HANZ DATA 5" then v.value = "00007369h" needsUpdate = true
+        elseif v.name == "HANZ DATA 6" then v.value = "00000000h" needsUpdate = true
+        elseif v.name == "HANZ NILAI POINTER" then v.value = "0" needsUpdate = true
+        elseif v.name == "HANZ NILAI" then v.value = "2" needsUpdate = true end
+        if needsUpdate then v.freeze = true table.insert(updateList, v) count = count + 1 end
+    end
+    if #updateList > 0 then gg.setValues(updateList) gg.addListItems(updateList) gg.toast("Berhasil memproses Menu 13") else gg.toast("Saved List Kosong!") end
+end
+
+function L14()
+    local items = gg.getListItems()
+    local updateList = {}
+    local count = 0
+    for i, v in ipairs(items) do
+        local needsUpdate = false
+        if v.name == "HANZ DATA 1" then v.value = "696B5324h" needsUpdate = true
+        elseif v.name == "HANZ DATA 2" then v.value = "6F435F6Eh" needsUpdate = true
+        elseif v.name == "HANZ DATA 3" then v.value = "74695F77h" needsUpdate = true
+        elseif v.name == "HANZ DATA 4" then v.value = "32796C61h" needsUpdate = true
+        elseif v.name == "HANZ DATA 5" then v.value = "00343230h" needsUpdate = true
+        elseif v.name == "HANZ DATA 6" then v.value = "00000000h" needsUpdate = true
+        elseif v.name == "HANZ NILAI POINTER" then v.value = "0" needsUpdate = true
+        elseif v.name == "HANZ NILAI" then v.value = "2" needsUpdate = true end
+        if needsUpdate then v.freeze = true table.insert(updateList, v) count = count + 1 end
+    end
+    if #updateList > 0 then gg.setValues(updateList) gg.addListItems(updateList) gg.toast("Berhasil memproses Menu 14") else gg.toast("Saved List Kosong!") end
+end
+
+function L15()
+    local items = gg.getListItems()
+    local updateList = {}
+    local count = 0
+    for i, v in ipairs(items) do
+        local needsUpdate = false
+        if v.name == "HANZ DATA 1" then v.value = "696B532Ah" needsUpdate = true
+        elseif v.name == "HANZ DATA 2" then v.value = "6F435F6Eh" needsUpdate = true
+        elseif v.name == "HANZ DATA 3" then v.value = "69625F77h" needsUpdate = true
+        elseif v.name == "HANZ DATA 4" then v.value = "64687472h" needsUpdate = true
+        elseif v.name == "HANZ DATA 5" then v.value = "30327961h" needsUpdate = true
+        elseif v.name == "HANZ DATA 6" then v.value = "00003432h" needsUpdate = true
+        elseif v.name == "HANZ NILAI POINTER" then v.value = "0" needsUpdate = true
+        elseif v.name == "HANZ NILAI" then v.value = "2" needsUpdate = true end
+        if needsUpdate then v.freeze = true table.insert(updateList, v) count = count + 1 end
+    end
+    if #updateList > 0 then gg.setValues(updateList) gg.addListItems(updateList) gg.toast("Berhasil memproses Menu 15") else gg.toast("Saved List Kosong!") end
+end
+
+function L16()
+    local items = gg.getListItems()
+    local updateList = {}
+    local count = 0
+    for i, v in ipairs(items) do
+        local needsUpdate = false
+        if v.name == "HANZ DATA 1" then v.value = "696B5326h" needsUpdate = true
+        elseif v.name == "HANZ DATA 2" then v.value = "6F435F6Eh" needsUpdate = true
+        elseif v.name == "HANZ DATA 3" then v.value = "69705F77h" needsUpdate = true
+        elseif v.name == "HANZ DATA 4" then v.value = "65746172h" needsUpdate = true
+        elseif v.name == "HANZ DATA 5" then v.value = "34323032h" needsUpdate = true
+        elseif v.name == "HANZ DATA 6" then v.value = "00000000h" needsUpdate = true
+        elseif v.name == "HANZ NILAI POINTER" then v.value = "0" needsUpdate = true
+        elseif v.name == "HANZ NILAI" then v.value = "2" needsUpdate = true end
+        if needsUpdate then v.freeze = true table.insert(updateList, v) count = count + 1 end
+    end
+    if #updateList > 0 then gg.setValues(updateList) gg.addListItems(updateList) gg.toast("Berhasil memproses Menu 16") else gg.toast("Saved List Kosong!") end
+end
+
+function L17()
+    local items = gg.getListItems()
+    local updateList = {}
+    local count = 0
+    for i, v in ipairs(items) do
+        local needsUpdate = false
+        if v.name == "HANZ DATA 1" then v.value = "696B531Eh" needsUpdate = true
+        elseif v.name == "HANZ DATA 2" then v.value = "6F435F6Eh" needsUpdate = true
+        elseif v.name == "HANZ DATA 3" then v.value = "72615F77h" needsUpdate = true
+        elseif v.name == "HANZ DATA 4" then v.value = "63697463h" needsUpdate = true
+        elseif v.name == "HANZ DATA 5" then v.value = "00000000h" needsUpdate = true
+        elseif v.name == "HANZ DATA 6" then v.value = "00000000h" needsUpdate = true
+        elseif v.name == "HANZ NILAI POINTER" then v.value = "0" needsUpdate = true
+        elseif v.name == "HANZ NILAI" then v.value = "2" needsUpdate = true end
+        if needsUpdate then v.freeze = true table.insert(updateList, v) count = count + 1 end
+    end
+    if #updateList > 0 then gg.setValues(updateList) gg.addListItems(updateList) gg.toast("Berhasil memproses Menu 17") else gg.toast("Saved List Kosong!") end
+end
+
+function L18()
+    local items = gg.getListItems()
+    local updateList = {}
+    local count = 0
+    for i, v in ipairs(items) do
+        local needsUpdate = false
+        if v.name == "HANZ DATA 1" then v.value = "696B5324h" needsUpdate = true
+        elseif v.name == "HANZ DATA 2" then v.value = "6F435F6Eh" needsUpdate = true
+        elseif v.name == "HANZ DATA 3" then v.value = "72665F77h" needsUpdate = true
+        elseif v.name == "HANZ DATA 4" then v.value = "65636E61h" needsUpdate = true
+        elseif v.name == "HANZ DATA 5" then v.value = "0038365Fh" needsUpdate = true
+        elseif v.name == "HANZ DATA 6" then v.value = "00000000h" needsUpdate = true
+        elseif v.name == "HANZ NILAI POINTER" then v.value = "0" needsUpdate = true
+        elseif v.name == "HANZ NILAI" then v.value = "2" needsUpdate = true end
+        if needsUpdate then v.freeze = true table.insert(updateList, v) count = count + 1 end
+    end
+    if #updateList > 0 then gg.setValues(updateList) gg.addListItems(updateList) gg.toast("Berhasil memproses Menu 18") else gg.toast("Saved List Kosong!") end
+end
+
+function L19()
+    local items = gg.getListItems()
+    local updateList = {}
+    local count = 0
+    for i, v in ipairs(items) do
+        local needsUpdate = false
+        if v.name == "HANZ DATA 1" then v.value = "696B532Ch" needsUpdate = true
+        elseif v.name == "HANZ DATA 2" then v.value = "6F435F6Eh" needsUpdate = true
+        elseif v.name == "HANZ DATA 3" then v.value = "69425F77h" needsUpdate = true
+        elseif v.name == "HANZ DATA 4" then v.value = "64687472h" needsUpdate = true
+        elseif v.name == "HANZ DATA 5" then v.value = "325F7961h" needsUpdate = true
+        elseif v.name == "HANZ DATA 6" then v.value = "00353230h" needsUpdate = true
+        elseif v.name == "HANZ NILAI POINTER" then v.value = "0" needsUpdate = true
+        elseif v.name == "HANZ NILAI" then v.value = "2" needsUpdate = true end
+        if needsUpdate then v.freeze = true table.insert(updateList, v) count = count + 1 end
+    end
+    if #updateList > 0 then gg.setValues(updateList) gg.addListItems(updateList) gg.toast("Berhasil memproses Menu 19") else gg.toast("Saved List Kosong!") end
+end
+
+function L20()
+    local items = gg.getListItems()
+    local updateList = {}
+    local count = 0
+    for i, v in ipairs(items) do
+        local needsUpdate = false
+        if v.name == "HANZ DATA 1" then v.value = "696B532Ah" needsUpdate = true
+        elseif v.name == "HANZ DATA 2" then v.value = "6F435F6Eh" needsUpdate = true
+        elseif v.name == "HANZ DATA 3" then v.value = "6C635F77h" needsUpdate = true
+        elseif v.name == "HANZ DATA 4" then v.value = "69737361h" needsUpdate = true
+        elseif v.name == "HANZ DATA 5" then v.value = "73756D63h" needsUpdate = true
+        elseif v.name == "HANZ DATA 6" then v.value = "00006369h" needsUpdate = true
+        elseif v.name == "HANZ NILAI POINTER" then v.value = "0" needsUpdate = true
+        elseif v.name == "HANZ NILAI" then v.value = "2" needsUpdate = true end
+        if needsUpdate then v.freeze = true table.insert(updateList, v) count = count + 1 end
+    end
+    if #updateList > 0 then gg.setValues(updateList) gg.addListItems(updateList) gg.toast("Berhasil memproses Menu 20") else gg.toast("Saved List Kosong!") end
+end
+
+function L21()
+    local items = gg.getListItems()
+    local updateList = {}
+    local count = 0
+    for i, v in ipairs(items) do
+        local needsUpdate = false
+        if v.name == "HANZ DATA 1" then v.value = "696B531Ch" needsUpdate = true
+        elseif v.name == "HANZ DATA 2" then v.value = "6F435F6Eh" needsUpdate = true
+        elseif v.name == "HANZ DATA 3" then v.value = "616A5F77h" needsUpdate = true
+        elseif v.name == "HANZ DATA 4" then v.value = "006E6170h" needsUpdate = true
+        elseif v.name == "HANZ DATA 5" then v.value = "00000000h" needsUpdate = true
+        elseif v.name == "HANZ DATA 6" then v.value = "00000000h" needsUpdate = true
+        elseif v.name == "HANZ NILAI POINTER" then v.value = "0" needsUpdate = true
+        elseif v.name == "HANZ NILAI" then v.value = "2" needsUpdate = true end
+        if needsUpdate then v.freeze = true table.insert(updateList, v) count = count + 1 end
+    end
+    if #updateList > 0 then gg.setValues(updateList) gg.addListItems(updateList) gg.toast("Berhasil memproses Menu 21") else gg.toast("Saved List Kosong!") end
+end
+
+function L22()
+    local items = gg.getListItems()
+    local updateList = {}
+    local count = 0
+    for i, v in ipairs(items) do
+        local needsUpdate = false
+        if v.name == "HANZ DATA 1" then v.value = "696B531Ah" needsUpdate = true
+        elseif v.name == "HANZ DATA 2" then v.value = "6F435F6Eh" needsUpdate = true
+        elseif v.name == "HANZ DATA 3" then v.value = "72615F77h" needsUpdate = true
+        elseif v.name == "HANZ DATA 4" then v.value = "00006261h" needsUpdate = true
+        elseif v.name == "HANZ DATA 5" then v.value = "00000000h" needsUpdate = true
+        elseif v.name == "HANZ DATA 6" then v.value = "00000000h" needsUpdate = true
+        elseif v.name == "HANZ NILAI POINTER" then v.value = "0" needsUpdate = true
+        elseif v.name == "HANZ NILAI" then v.value = "2" needsUpdate = true end
+        if needsUpdate then v.freeze = true table.insert(updateList, v) count = count + 1 end
+    end
+    if #updateList > 0 then gg.setValues(updateList) gg.addListItems(updateList) gg.toast("Berhasil memproses Menu 22") else gg.toast("Saved List Kosong!") end
+end
+
+function L23()
+    local items = gg.getListItems()
+    local updateList = {}
+    local count = 0
+    for i, v in ipairs(items) do
+        local needsUpdate = false
+        if v.name == "HANZ DATA 1" then v.value = "696B5322h" needsUpdate = true
+        elseif v.name == "HANZ DATA 2" then v.value = "6F435F6Eh" needsUpdate = true
+        elseif v.name == "HANZ DATA 3" then v.value = "65665F77h" needsUpdate = true
+        elseif v.name == "HANZ DATA 4" then v.value = "76697473h" needsUpdate = true
+        elseif v.name == "HANZ DATA 5" then v.value = "00006C61h" needsUpdate = true
+        elseif v.name == "HANZ DATA 6" then v.value = "00000000h" needsUpdate = true
+        elseif v.name == "HANZ NILAI POINTER" then v.value = "0" needsUpdate = true
+        elseif v.name == "HANZ NILAI" then v.value = "2" needsUpdate = true end
+        if needsUpdate then v.freeze = true table.insert(updateList, v) count = count + 1 end
+    end
+    if #updateList > 0 then gg.setValues(updateList) gg.addListItems(updateList) gg.toast("Berhasil memproses Menu 23") else gg.toast("Saved List Kosong!") end
+end
+
+function L24()
+    local items = gg.getListItems()
+    local updateList = {}
+    local count = 0
+    for i, v in ipairs(items) do
+        local needsUpdate = false
+        if v.name == "HANZ DATA 1" then v.value = "696B5328h" needsUpdate = true
+        elseif v.name == "HANZ DATA 2" then v.value = "6F435F6Eh" needsUpdate = true
+        elseif v.name == "HANZ DATA 3" then v.value = "61635F77h" needsUpdate = true
+        elseif v.name == "HANZ DATA 4" then v.value = "76696E72h" needsUpdate = true
+        elseif v.name == "HANZ DATA 5" then v.value = "375F6C61h" needsUpdate = true
+        elseif v.name == "HANZ DATA 6" then v.value = "00000030h" needsUpdate = true
+        elseif v.name == "HANZ NILAI POINTER" then v.value = "0" needsUpdate = true
+        elseif v.name == "HANZ NILAI" then v.value = "2" needsUpdate = true end
+        if needsUpdate then v.freeze = true table.insert(updateList, v) count = count + 1 end
+    end
+    if #updateList > 0 then gg.setValues(updateList) gg.addListItems(updateList) gg.toast("Berhasil memproses Menu 24") else gg.toast("Saved List Kosong!") end
+end
+
+function L25()
+    local items = gg.getListItems()
+    local updateList = {}
+    local count = 0
+    for i, v in ipairs(items) do
+        local needsUpdate = false
+        if v.name == "HANZ DATA 1" then v.value = "696B532Ah" needsUpdate = true
+        elseif v.name == "HANZ DATA 2" then v.value = "6F435F6Eh" needsUpdate = true
+        elseif v.name == "HANZ DATA 3" then v.value = "65635F77h" needsUpdate = true
+        elseif v.name == "HANZ DATA 4" then v.value = "7262656Ch" needsUpdate = true
+        elseif v.name == "HANZ DATA 5" then v.value = "5F797469h" needsUpdate = true
+        elseif v.name == "HANZ DATA 6" then v.value = "00003337h" needsUpdate = true
+        elseif v.name == "HANZ NILAI POINTER" then v.value = "0" needsUpdate = true
+        elseif v.name == "HANZ NILAI" then v.value = "2" needsUpdate = true end
+        if needsUpdate then v.freeze = true table.insert(updateList, v) count = count + 1 end
+    end
+    if #updateList > 0 then gg.setValues(updateList) gg.addListItems(updateList) gg.toast("Berhasil memproses Menu 25") else gg.toast("Saved List Kosong!") end
+end
+
+function EXIT()
+    gg.toast("TERIMA KASIH TELAH MENGGUNAKAN HANZ SCRIPT")
+    os.exit()
+end
+
+-- SYSTEM ANTI-CLOSE (LOOPING)
+while true do
+    if gg.isVisible(true) then
+        PUB_VISIBLE = 1
+        gg.setVisible(false)
+    end
+    if PUB_VISIBLE == 1 then
+        HOME()
+    end
+    gg.sleep(100)
+end
