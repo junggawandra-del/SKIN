@@ -1,0 +1,120 @@
+-- HANZ PROJECT - TOWNSHIP
+-- SKIN STASIUN/STATION
+
+gg.clearResults()
+
+-- FUNGSI EFEK LOADING (Warna-warni via Toast)
+function loading_hanz()
+    gg.toast("⏳ [░░░░░░░░░░] 0%")
+    gg.sleep(150)
+    gg.toast("⚡ [▓▓▓░░░░░░░] 30%")
+    gg.sleep(150)
+    gg.toast("🌸 [▓▓▓▓▓▓░░░░] 60%")
+    gg.sleep(150)
+    gg.toast("💎 [▓▓▓▓▓▓▓▓▓░] 90%")
+    gg.sleep(150)
+    gg.toast("✨ [▓▓▓▓▓▓▓▓▓▓] 100%")
+    gg.sleep(200)
+    gg.toast("✅ SCRIPT READY")
+end
+
+-- LOGIKA 1: EXPRESS PORTAL
+function L1() 
+    local list = gg.getListItems()
+    local up = {}
+    for i, v in ipairs(list) do
+        if v.name == "HANZ DATA 1" then v.value = "696B531Ch" v.freeze = true table.insert(up, v) end
+        if v.name == "HANZ DATA 2" then v.value = "72545F6Eh" v.freeze = true table.insert(up, v) end
+        if v.name == "HANZ DATA 3" then v.value = "5F6E6961h" v.freeze = true table.insert(up, v) end
+        if v.name == "HANZ DATA 4" then v.value = "00325053h" v.freeze = true table.insert(up, v) end
+        if v.name == "HANZ DATA 5" then v.value = "00000000h" v.freeze = true table.insert(up, v) end
+        if v.name == "HANZ DATA 6" then v.value = "00000000h" v.freeze = true table.insert(up, v) end
+        if v.name == "HANZ NILAI POINTER" then v.value = "0" v.freeze = true table.insert(up, v) end
+        if v.name == "HANZ NILAI" then v.value = "2" v.freeze = true table.insert(up, v) end
+    end
+    gg.setValues(up) gg.addListItems(up) gg.toast("EXPRESS PORTAL AKTIF")
+end
+
+-- LOGIKA 2: GHOST STATION
+function L2() 
+    local list = gg.getListItems()
+    local up = {}
+    for i, v in ipairs(list) do
+        if v.name == "HANZ DATA 1" then v.value = "696B532Ah" v.freeze = true table.insert(up, v) end
+        if v.name == "HANZ DATA 2" then v.value = "72545F6Eh" v.freeze = true table.insert(up, v) end
+        if v.name == "HANZ DATA 3" then v.value = "536E6961h" v.freeze = true table.insert(up, v) end
+        if v.name == "HANZ DATA 4" then v.value = "69746174h" v.freeze = true table.insert(up, v) end
+        if v.name == "HANZ DATA 5" then v.value = "535F6E6Fh" v.freeze = true table.insert(up, v) end
+        if v.name == "HANZ DATA 6" then v.value = "00003550h" v.freeze = true table.insert(up, v) end
+        if v.name == "HANZ NILAI POINTER" then v.value = "0" v.freeze = true table.insert(up, v) end
+        if v.name == "HANZ NILAI" then v.value = "2" v.freeze = true table.insert(up, v) end
+    end
+    gg.setValues(up) gg.addListItems(up) gg.toast("GHOST STATION AKTIF")
+end
+
+-- LOGIKA 3: DISCO STATION
+function L3() 
+    local list = gg.getListItems()
+    local up = {}
+    for i, v in ipairs(list) do
+        if v.name == "HANZ DATA 1" then v.value = "696B532Ah" v.freeze = true table.insert(up, v) end
+        if v.name == "HANZ DATA 2" then v.value = "72545F6Eh" v.freeze = true table.insert(up, v) end
+        if v.name == "HANZ DATA 3" then v.value = "536E6961h" v.freeze = true table.insert(up, v) end
+        if v.name == "HANZ DATA 4" then v.value = "69746174h" v.freeze = true table.insert(up, v) end
+        if v.name == "HANZ DATA 5" then v.value = "535F6E6Fh" v.freeze = true table.insert(up, v) end
+        if v.name == "HANZ DATA 6" then v.value = "00003850h" v.freeze = true table.insert(up, v) end
+        if v.name == "HANZ NILAI POINTER" then v.value = "0" v.freeze = true table.insert(up, v) end
+        if v.name == "HANZ NILAI" then v.value = "2" v.freeze = true table.insert(up, v) end
+    end
+    gg.setValues(up) gg.addListItems(up) gg.toast("DISCO STATION AKTIF")
+end
+
+-- LOGIKA 4: SPACE STATION
+function L4() 
+    local list = gg.getListItems()
+    local up = {}
+    for i, v in ipairs(list) do
+        if v.name == "HANZ DATA 1" then v.value = "696B532Ch" v.freeze = true table.insert(up, v) end
+        if v.name == "HANZ DATA 2" then v.value = "72545F6Eh" v.freeze = true table.insert(up, v) end
+        if v.name == "HANZ DATA 3" then v.value = "536E6961h" v.freeze = true table.insert(up, v) end
+        if v.name == "HANZ DATA 4" then v.value = "69746174h" v.freeze = true table.insert(up, v) end
+        if v.name == "HANZ DATA 5" then v.value = "6D5F6E6Fh" v.freeze = true table.insert(up, v) end
+        if v.name == "HANZ DATA 6" then v.value = "00737261h" v.freeze = true table.insert(up, v) end
+        if v.name == "HANZ NILAI POINTER" then v.value = "0" v.freeze = true table.insert(up, v) end
+        if v.name == "HANZ NILAI" then v.value = "2" v.freeze = true table.insert(up, v) end
+    end
+    gg.setValues(up) gg.addListItems(up) gg.toast("SPACE STATION AKTIF")
+end
+
+-- START SCRIPT
+loading_hanz()
+
+while true do
+    if gg.isVisible(true) then
+        gg.setVisible(false)
+        
+        -- Update Waktu Real-time
+        local tgl = os.date("%A, %d %B %Y")
+        local jam = os.date("%H:%M:%S")
+        local info = "━━━━━━━━━━━━━━━━━━━━━━\n📅 " .. tgl .. "\n⏰ " .. jam .. "\n🎮 GAME : TOWNSHIP\n👤 DEV : HANZ\n🏗️ MENU : SKIN STASIUN/STATION\n━━━━━━━━━━━━━━━━━━━━━━"
+
+        menu = gg.choice({
+            "1. EXPRESS PORTAL",
+            "2. GHOST STATION",
+            "3. DISCO STATION",
+            "4. SPACE STATION",
+            "❌ KELUAR / EXIT"
+        }, nil, info)
+
+        if menu == 1 then L1() end
+        if menu == 2 then L2() end
+        if menu == 3 then L3() end
+        if menu == 4 then L4() end
+        if menu == 5 then 
+            gg.toast("Keluar dari script...")
+            os.exit() 
+        end
+    end
+    gg.sleep(100)
+end
+
