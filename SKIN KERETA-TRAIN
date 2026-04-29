@@ -1,0 +1,413 @@
+-- ========================================== --
+-- SCRIPT : HANZ PROJECT (TRAIN SKIN)
+-- DEV    : HANZ
+-- GAME   : TOWNSHIP
+-- ========================================== --
+
+gg.clearResults()
+
+-- FUNGSI EFEK LOADING PELANGI
+function loading_hanz()
+    local frames = {"❤️", "🧡", "💛", "💚", "💙", "💜", "🤍"}
+    for i = 1, 14 do
+        gg.toast("💎 MENU READY 💎\n" .. frames[(i % #frames) + 1] .. " [ ▒▒▒▒▒▒▒▒▒▒ ] " .. (i * 7) .. "%")
+        gg.sleep(70)
+    end
+end
+
+loading_hanz()
+
+-- ========================================== --
+-- LOGIKA MENU 1 SAMPAI 17 (DIPISAH TOTAL)
+-- ========================================== --
+
+function M1() -- ULTRA EXPRESS
+    local items = gg.getListItems()
+    local updateList = {}
+    for i, v in ipairs(items) do
+        if v.name == "HANZ DATA 1" then v.value = "696B5320h"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ DATA 2" then v.value = "72545F6Eh"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ DATA 3" then v.value = "5F6E6961h"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ DATA 4" then v.value = "3A325053h"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ DATA 5" then v.value = "00000032h"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ DATA 6" then v.value = "00000000h"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ NILAI POINTER" then v.value = "0"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ NILAI" then v.value = "2"; v.freeze = true; table.insert(updateList, v)
+        end
+    end
+    gg.setValues(updateList)
+    gg.addListItems(updateList)
+    gg.toast("✅ ULTRA EXPRESS BERHASIL")
+end
+
+function M2() -- GHOST TRAIN
+    local items = gg.getListItems()
+    local updateList = {}
+    for i, v in ipairs(items) do
+        if v.name == "HANZ DATA 1" then v.value = "696B531Ch"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ DATA 2" then v.value = "72545F6Eh"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ DATA 3" then v.value = "5F6E6961h"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ DATA 4" then v.value = "00355053h"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ DATA 5" then v.value = "00000000h"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ DATA 6" then v.value = "00000000h"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ NILAI POINTER" then v.value = "0"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ NILAI" then v.value = "2"; v.freeze = true; table.insert(updateList, v)
+        end
+    end
+    gg.setValues(updateList)
+    gg.addListItems(updateList)
+    gg.toast("✅ GHOST TRAIN BERHASIL")
+end
+
+function M3() -- DISCO TRAIN
+    local items = gg.getListItems()
+    local updateList = {}
+    for i, v in ipairs(items) do
+        if v.name == "HANZ DATA 1" then v.value = "696B531Ch"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ DATA 2" then v.value = "72545F6Eh"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ DATA 3" then v.value = "5F6E6961h"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ DATA 4" then v.value = "00385053h"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ DATA 5" then v.value = "00000000h"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ DATA 6" then v.value = "00000000h"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ NILAI POINTER" then v.value = "0"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ NILAI" then v.value = "2"; v.freeze = true; table.insert(updateList, v)
+        end
+    end
+    gg.setValues(updateList)
+    gg.addListItems(updateList)
+    gg.toast("✅ DISCO TRAIN BERHASIL")
+end
+
+function M4() -- COWBOY TRAIN
+    local items = gg.getListItems()
+    local updateList = {}
+    for i, v in ipairs(items) do
+        if v.name == "HANZ DATA 1" then v.value = "696B5324h"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ DATA 2" then v.value = "72545F6Eh"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ DATA 3" then v.value = "5F6E6961h"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ DATA 4" then v.value = "74736577h"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ DATA 5" then v.value = "006E7265h"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ DATA 6" then v.value = "00000000h"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ NILAI POINTER" then v.value = "0"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ NILAI" then v.value = "2"; v.freeze = true; table.insert(updateList, v)
+        end
+    end
+    gg.setValues(updateList)
+    gg.addListItems(updateList)
+    gg.toast("✅ COWBOY TRAIN BERHASIL")
+end
+
+function M5() -- CHRISTMAS TRAIN
+    local items = gg.getListItems()
+    local updateList = {}
+    for i, v in ipairs(items) do
+        if v.name == "HANZ DATA 1" then v.value = "696B5328h"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ DATA 2" then v.value = "72545F6Eh"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ DATA 3" then v.value = "5F6E6961h"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ DATA 4" then v.value = "69726863h"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ DATA 5" then v.value = "616D7473h"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ DATA 6" then v.value = "00000073h"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ NILAI POINTER" then v.value = "0"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ NILAI" then v.value = "2"; v.freeze = true; table.insert(updateList, v)
+        end
+    end
+    gg.setValues(updateList)
+    gg.addListItems(updateList)
+    gg.toast("✅ CHRISTMAS TRAIN BERHASIL")
+end
+
+function M6() -- EASTER EXPRESS
+    local items = gg.getListItems()
+    local updateList = {}
+    for i, v in ipairs(items) do
+        if v.name == "HANZ DATA 1" then v.value = "696B5322h"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ DATA 2" then v.value = "72545F6Eh"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ DATA 3" then v.value = "5F6E6961h"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ DATA 4" then v.value = "74736165h"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ DATA 5" then v.value = "00007265h"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ DATA 6" then v.value = "00000000h"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ NILAI POINTER" then v.value = "0"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ NILAI" then v.value = "2"; v.freeze = true; table.insert(updateList, v)
+        end
+    end
+    gg.setValues(updateList)
+    gg.addListItems(updateList)
+    gg.toast("✅ EASTER EXPRESS BERHASIL")
+end
+
+function M7() -- PRIMEVAL EXPRESS
+    local items = gg.getListItems()
+    local updateList = {}
+    for i, v in ipairs(items) do
+        if v.name == "HANZ DATA 1" then v.value = "696B532Ch"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ DATA 2" then v.value = "72545F6Eh"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ DATA 3" then v.value = "5F6E6961h"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ DATA 4" then v.value = "68657270h"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ DATA 5" then v.value = "6F747369h"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ DATA 6" then v.value = "00636972h"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ NILAI POINTER" then v.value = "0"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ NILAI" then v.value = "2"; v.freeze = true; table.insert(updateList, v)
+        end
+    end
+    gg.setValues(updateList)
+    gg.addListItems(updateList)
+    gg.toast("✅ PRIMEVAL EXPRESS BERHASIL")
+end
+
+function M8() -- THEATER EXPRESS
+    local items = gg.getListItems()
+    local updateList = {}
+    for i, v in ipairs(items) do
+        if v.name == "HANZ DATA 1" then v.value = "696B532Ah"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ DATA 2" then v.value = "72545F6Eh"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ DATA 3" then v.value = "5F6E6961h"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ DATA 4" then v.value = "61656874h"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ DATA 5" then v.value = "63697274h"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ DATA 6" then v.value = "00006C61h"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ NILAI POINTER" then v.value = "0"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ NILAI" then v.value = "2"; v.freeze = true; table.insert(updateList, v)
+        end
+    end
+    gg.setValues(updateList)
+    gg.addListItems(updateList)
+    gg.toast("✅ THEATER EXPRESS BERHASIL")
+end
+
+function M9() -- DRAGON TRAIN
+    local items = gg.getListItems()
+    local updateList = {}
+    for i, v in ipairs(items) do
+        if v.name == "HANZ DATA 1" then v.value = "696B532Ch"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ DATA 2" then v.value = "72545F6Eh"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ DATA 3" then v.value = "5F6E6961h"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ DATA 4" then v.value = "616E756Ch"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ DATA 5" then v.value = "32594E72h"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ DATA 6" then v.value = "00323230h"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ NILAI POINTER" then v.value = "0"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ NILAI" then v.value = "2"; v.freeze = true; table.insert(updateList, v)
+        end
+    end
+    gg.setValues(updateList)
+    gg.addListItems(updateList)
+    gg.toast("✅ DRAGON TRAIN BERHASIL")
+end
+
+function M10() -- MARS ROVER
+    local items = gg.getListItems()
+    local updateList = {}
+    for i, v in ipairs(items) do
+        if v.name == "HANZ DATA 1" then v.value = "696B531Eh"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ DATA 2" then v.value = "72545F6Eh"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ DATA 3" then v.value = "5F6E6961h"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ DATA 4" then v.value = "7372616Dh"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ DATA 5" then v.value = "00000000h"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ DATA 6" then v.value = "00000000h"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ NILAI POINTER" then v.value = "0"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ NILAI" then v.value = "2"; v.freeze = true; table.insert(updateList, v)
+        end
+    end
+    gg.setValues(updateList)
+    gg.addListItems(updateList)
+    gg.toast("✅ MARS ROVER BERHASIL")
+end
+
+function M11() -- WOODEN WAGON
+    local items = gg.getListItems()
+    local updateList = {}
+    for i, v in ipairs(items) do
+        if v.name == "HANZ DATA 1" then v.value = "696B5328h"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ DATA 2" then v.value = "72545F6Eh"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ DATA 3" then v.value = "5F6E6961h"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ DATA 4" then v.value = "69626F72h"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ DATA 5" then v.value = "6F6F486Eh"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ DATA 6" then v.value = "00000064h"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ NILAI POINTER" then v.value = "0"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ NILAI" then v.value = "2"; v.freeze = true; table.insert(updateList, v)
+        end
+    end
+    gg.setValues(updateList)
+    gg.addListItems(updateList)
+    gg.toast("✅ WOODEN WAGON BERHASIL")
+end
+
+function M12() -- MUSIC EXPRESS
+    local items = gg.getListItems()
+    local updateList = {}
+    for i, v in ipairs(items) do
+        if v.name == "HANZ DATA 1" then v.value = "696B5328h"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ DATA 2" then v.value = "72545F6Eh"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ DATA 3" then v.value = "5F6E6961h"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ DATA 4" then v.value = "6B636F72h"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ DATA 5" then v.value = "6C6F726Eh"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ DATA 6" then v.value = "0000006Ch"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ NILAI POINTER" then v.value = "0"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ NILAI" then v.value = "2"; v.freeze = true; table.insert(updateList, v)
+        end
+    end
+    gg.setValues(updateList)
+    gg.addListItems(updateList)
+    gg.toast("✅ MUSIC EXPRESS BERHASIL")
+end
+
+function M13() -- KNIGHT TRAIN
+    local items = gg.getListItems()
+    local updateList = {}
+    for i, v in ipairs(items) do
+        if v.name == "HANZ DATA 1" then v.value = "696B5322h"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ DATA 2" then v.value = "72545F6Eh"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ DATA 3" then v.value = "5F6E6961h"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ DATA 4" then v.value = "67696E6Bh"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ DATA 5" then v.value = "00007468h"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ DATA 6" then v.value = "00000000h"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ NILAI POINTER" then v.value = "0"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ NILAI" then v.value = "2"; v.freeze = true; table.insert(updateList, v)
+        end
+    end
+    gg.setValues(updateList)
+    gg.addListItems(updateList)
+    gg.toast("✅ KNIGHT TRAIN BERHASIL")
+end
+
+function M14() -- EXPRESS TRAM
+    local items = gg.getListItems()
+    local updateList = {}
+    for i, v in ipairs(items) do
+        if v.name == "HANZ DATA 1" then v.value = "696B5328h"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ DATA 2" then v.value = "72545F6Eh"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ DATA 3" then v.value = "5F6E6961h"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ DATA 4" then v.value = "6C617469h"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ DATA 5" then v.value = "32303279h"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ DATA 6" then v.value = "00000034h"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ NILAI POINTER" then v.value = "0"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ NILAI" then v.value = "2"; v.freeze = true; table.insert(updateList, v)
+        end
+    end
+    gg.setValues(updateList)
+    gg.addListItems(updateList)
+    gg.toast("✅ EXPRESS TRAM BERHASIL")
+end
+
+function M15() -- MYTIC TRAIN
+    local items = gg.getListItems()
+    local updateList = {}
+    for i, v in ipairs(items) do
+        if v.name == "HANZ DATA 1" then v.value = "696B5328h"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ DATA 2" then v.value = "72545F6Eh"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ DATA 3" then v.value = "5F6E6961h"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ DATA 4" then v.value = "6C617469h"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ DATA 5" then v.value = "32303279h"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ DATA 6" then v.value = "00000034h"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ NILAI POINTER" then v.value = "0"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ NILAI" then v.value = "2"; v.freeze = true; table.insert(updateList, v)
+        end
+    end
+    gg.setValues(updateList)
+    gg.addListItems(updateList)
+    gg.toast("✅ MYTIC TRAIN BERHASIL")
+end
+
+function M16() -- FRENCH TRAIN
+    local items = gg.getListItems()
+    local updateList = {}
+    for i, v in ipairs(items) do
+        if v.name == "HANZ DATA 1" then v.value = "696B5328h"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ DATA 2" then v.value = "72545F6Eh"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ DATA 3" then v.value = "5F6E6961h"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ DATA 4" then v.value = "6E617266h"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ DATA 5" then v.value = "365F6563h"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ DATA 6" then v.value = "00000038h"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ NILAI POINTER" then v.value = "0"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ NILAI" then v.value = "2"; v.freeze = true; table.insert(updateList, v)
+        end
+    end
+    gg.setValues(updateList)
+    gg.addListItems(updateList)
+    gg.toast("✅ FRENCH TRAIN BERHASIL")
+end
+
+function M17() -- GATSBY TRAIN
+    local items = gg.getListItems()
+    local updateList = {}
+    for i, v in ipairs(items) do
+        if v.name == "HANZ DATA 1" then v.value = "696B5322h"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ DATA 2" then v.value = "72545F6Eh"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ DATA 3" then v.value = "5F6E6961h"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ DATA 4" then v.value = "73746147h"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ DATA 5" then v.value = "00007962h"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ DATA 6" then v.value = "00000000h"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ NILAI POINTER" then v.value = "0"; v.freeze = true; table.insert(updateList, v)
+        elseif v.name == "HANZ NILAI" then v.value = "2"; v.freeze = true; table.insert(updateList, v)
+        end
+    end
+    gg.setValues(updateList)
+    gg.addListItems(updateList)
+    gg.toast("✅ GATSBY TRAIN BERHASIL")
+end
+
+-- ========================================== --
+-- MENU UTAMA
+-- ========================================== --
+
+function Main()
+    local t = os.date("*t")
+    -- Perbaikan: menggunakan t.year secara langsung karena engine Luaj tidak support %Y
+    local header = "📅 " .. string.format("%02d-%02d-", t.day, t.month) .. t.year .. 
+                   string.format(" | ⏰ %02d:%02d:%02d\n", t.hour, t.min, t.sec) ..
+                   "🎮 GAME : TOWNSHIP\n👤 DEV : HANZ\n🛠️ MENU : SKIN KERETA/TRAIN"
+
+    local menu = gg.choice({
+        "1. 🚄 ULTRA EXPRESS",
+        "2. 👻 GHOST TRAIN",
+        "3. 🕺 DISCO TRAIN",
+        "4. 🤠 COWBOY TRAIN",
+        "5. 🎄 CHRISTMAS TRAIN",
+        "6. 🐰 EASTER EXPRESS",
+        "7. 🦖 PRIMEVAL EXPRESS",
+        "8. 🎭 THEATER EXPRESS",
+        "9. 🐲 DRAGON TRAIN",
+        "10. 🚀 MARS ROVER",
+        "11. 🪵 WOODEN WAGON",
+        "12. 🎷 MUSIC EXPRESS",
+        "13. 🛡️ KNIGHT TRAIN",
+        "14. 🚋 EXPRESS TRAM",
+        "15. 🦄 MYTIC TRAIN",
+        "16. 🥖 FRENCH TRAIN",
+        "17. 🎩 GATSBY TRAIN",
+        "❌ KELUAR / EXIT"
+    }, nil, header)
+
+    if menu == nil then 
+        -- Jika klik luar/batal, script disembunyikan
+    elseif menu == 1 then M1()
+    elseif menu == 2 then M2()
+    elseif menu == 3 then M3()
+    elseif menu == 4 then M4()
+    elseif menu == 5 then M5()
+    elseif menu == 6 then M6()
+    elseif menu == 7 then M7()
+    elseif menu == 8 then M8()
+    elseif menu == 9 then M9()
+    elseif menu == 10 then M10()
+    elseif menu == 11 then M11()
+    elseif menu == 12 then M12()
+    elseif menu == 13 then M13()
+    elseif menu == 14 then M14()
+    elseif menu == 15 then M15()
+    elseif menu == 16 then M16()
+    elseif menu == 17 then M17()
+    elseif menu == 18 then os.exit() 
+    end
+end
+
+-- ========================================== --
+-- LOOPING AGAR SCRIPT OTOMATIS TAMPIL
+-- ========================================== --
+
+while true do
+    if gg.isVisible(true) then
+        gg.setVisible(false)
+        Main()
+    end
+    gg.sleep(100)
+end
+
