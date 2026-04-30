@@ -1,0 +1,271 @@
+-- GG Script: HANZ PROJECT
+-- Game: Township
+-- Dev: HANZ
+
+gg.clearResults()
+
+-- Variabel Waktu & Tanggal Akurat
+local tanggal = os.date("%A, %d %B %Y")
+local jam = os.date("%H:%M:%S")
+
+-- Efek Loading Keren (Warna-warni & Love)
+function Loading()
+    gg.toast("⏳ Prepare HANZ PROJECT...")
+    gg.sleep(400)
+    gg.toast("❤️🧡💛")
+    gg.sleep(300)
+    gg.toast("💚💙💜")
+    gg.sleep(300)
+    gg.toast("💖 KERAJAAN/CASTLE MENU LOADED 💖")
+end
+
+-- Header Tampilan Atas
+local header = [[
+📅 ]] .. tanggal .. [[
+
+⏰ ]] .. jam .. [[
+
+━━━━━━━━━━━━━━━━━━━━━━
+🎮 GAME : TOWNSHIP
+💻 DEV  : HANZ
+🏰 MENU : KERAJAAN/CASTLE
+━━━━━━━━━━━━━━━━━━━━━━]]
+
+-- Fungsi Utama (Looping agar tidak mudah keluar)
+function Main()
+    while true do
+        if gg.isVisible(true) then
+            gg.setVisible(false)
+            local menu = gg.choice({
+                "1. 🏴‍☠️ PIRATE SHACK",
+                "2. ⚓ PIRATE HUB",
+                "3. 🚢 PIRATE PORT",
+                "4. 🏠 ISLAND HOUSE",
+                "5. 🏰 ISLAND MANOR",
+                "6. 🏨 ISLAND RESIDENCE",
+                "7. 🗼 LITTLE PARIS",
+                "8. 🌷 EASTER VILLAGE",
+                "9. 🗿 AZTEC ISLAND",
+                "❌ KELUAR / EXIT"
+            }, nil, header)
+
+            -- Kontrol Menu
+            if menu == 1 then L1()
+            elseif menu == 2 then L2()
+            elseif menu == 3 then L3()
+            elseif menu == 4 then L4()
+            elseif menu == 5 then L5()
+            elseif menu == 6 then L6()
+            elseif menu == 7 then L7()
+            elseif menu == 8 then L8()
+            elseif menu == 9 then L9()
+            elseif menu == 10 then os.exit() end
+        end
+        gg.sleep(100) 
+    end
+end
+
+-- ================= LOGIKA DIPISAH (1 - 9) =================
+
+-- 1. PIRATE SHACK
+function L1()
+    local items = gg.getListItems()
+    local updateList = {}
+    for i, v in ipairs(items) do
+        local matched = false
+        if v.name == "HANZ DATA 1" then v.value = "696B532Ah" matched = true end
+        if v.name == "HANZ DATA 2" then v.value = "6F465F6Eh" matched = true end
+        if v.name == "HANZ DATA 3" then v.value = "65727472h" matched = true end
+        if v.name == "HANZ DATA 4" then v.value = "505F7373h" matched = true end
+        if v.name == "HANZ DATA 5" then v.value = "74617269h" matched = true end
+        if v.name == "HANZ DATA 6" then v.value = "00003165h" matched = true end
+        if v.name == "HANZ NILAI POINTER" then v.value = "0" matched = true end
+        if v.name == "HANZ NILAI" then v.value = "2" matched = true end
+        
+        if matched then v.freeze = true table.insert(updateList, v) end
+    end
+    gg.setValues(updateList)
+    gg.addListItems(updateList)
+    gg.toast("✅ PIRATE SHACK UPDATED & FROZEN")
+end
+
+-- 2. PIRATE HUB
+function L2()
+    local items = gg.getListItems()
+    local updateList = {}
+    for i, v in ipairs(items) do
+        local matched = false
+        if v.name == "HANZ DATA 1" then v.value = "696B532Ah" matched = true end
+        if v.name == "HANZ DATA 2" then v.value = "6F465F6Eh" matched = true end
+        if v.name == "HANZ DATA 3" then v.value = "65727472h" matched = true end
+        if v.name == "HANZ DATA 4" then v.value = "505F7373h" matched = true end
+        if v.name == "HANZ DATA 5" then v.value = "74617269h" matched = true end
+        if v.name == "HANZ DATA 6" then v.value = "00003265h" matched = true end
+        if v.name == "HANZ NILAI POINTER" then v.value = "0" matched = true end
+        if v.name == "HANZ NILAI" then v.value = "2" matched = true end
+        
+        if matched then v.freeze = true table.insert(updateList, v) end
+    end
+    gg.setValues(updateList)
+    gg.addListItems(updateList)
+    gg.toast("✅ PIRATE HUB UPDATED & FROZEN")
+end
+
+-- 3. PIRATE PORT
+function L3()
+    local items = gg.getListItems()
+    local updateList = {}
+    for i, v in ipairs(items) do
+        local matched = false
+        if v.name == "HANZ DATA 1" then v.value = "696B532Ah" matched = true end
+        if v.name == "HANZ DATA 2" then v.value = "6F465F6Eh" matched = true end
+        if v.name == "HANZ DATA 3" then v.value = "65727472h" matched = true end
+        if v.name == "HANZ DATA 4" then v.value = "505F7373h" matched = true end
+        if v.name == "HANZ DATA 5" then v.value = "74617269h" matched = true end
+        if v.name == "HANZ DATA 6" then v.value = "00003365h" matched = true end
+        if v.name == "HANZ NILAI POINTER" then v.value = "0" matched = true end
+        if v.name == "HANZ NILAI" then v.value = "2" matched = true end
+        
+        if matched then v.freeze = true table.insert(updateList, v) end
+    end
+    gg.setValues(updateList)
+    gg.addListItems(updateList)
+    gg.toast("✅ PIRATE PORT UPDATED & FROZEN")
+end
+
+-- 4. ISLAND HOUSE
+function L4()
+    local items = gg.getListItems()
+    local updateList = {}
+    for i, v in ipairs(items) do
+        local matched = false
+        if v.name == "HANZ DATA 1" then v.value = "696B532Ah" matched = true end
+        if v.name == "HANZ DATA 2" then v.value = "6F465F6Eh" matched = true end
+        if v.name == "HANZ DATA 3" then v.value = "65727472h" matched = true end
+        if v.name == "HANZ DATA 4" then v.value = "475F7373h" matched = true end
+        if v.name == "HANZ DATA 5" then v.value = "62737461h" matched = true end
+        if v.name == "HANZ DATA 6" then v.value = "00003179h" matched = true end
+        if v.name == "HANZ NILAI POINTER" then v.value = "0" matched = true end
+        if v.name == "HANZ NILAI" then v.value = "2" matched = true end
+        
+        if matched then v.freeze = true table.insert(updateList, v) end
+    end
+    gg.setValues(updateList)
+    gg.addListItems(updateList)
+    gg.toast("✅ ISLAND HOUSE UPDATED & FROZEN")
+end
+
+-- 5. ISLAND MANOR
+function L5()
+    local items = gg.getListItems()
+    local updateList = {}
+    for i, v in ipairs(items) do
+        local matched = false
+        if v.name == "HANZ DATA 1" then v.value = "696B532Ah" matched = true end
+        if v.name == "HANZ DATA 2" then v.value = "6F465F6Eh" matched = true end
+        if v.name == "HANZ DATA 3" then v.value = "65727472h" matched = true end
+        if v.name == "HANZ DATA 4" then v.value = "475F7373h" matched = true end
+        if v.name == "HANZ DATA 5" then v.value = "62737461h" matched = true end
+        if v.name == "HANZ DATA 6" then v.value = "00003279h" matched = true end
+        if v.name == "HANZ NILAI POINTER" then v.value = "0" matched = true end
+        if v.name == "HANZ NILAI" then v.value = "2" matched = true end
+        
+        if matched then v.freeze = true table.insert(updateList, v) end
+    end
+    gg.setValues(updateList)
+    gg.addListItems(updateList)
+    gg.toast("✅ ISLAND MANOR UPDATED & FROZEN")
+end
+
+-- 6. ISLAND RESIDENCE
+function L6()
+    local items = gg.getListItems()
+    local updateList = {}
+    for i, v in ipairs(items) do
+        local matched = false
+        if v.name == "HANZ DATA 1" then v.value = "696B532Ah" matched = true end
+        if v.name == "HANZ DATA 2" then v.value = "6F465F6Eh" matched = true end
+        if v.name == "HANZ DATA 3" then v.value = "65727472h" matched = true end
+        if v.name == "HANZ DATA 4" then v.value = "475F7373h" matched = true end
+        if v.name == "HANZ DATA 5" then v.value = "62737461h" matched = true end
+        if v.name == "HANZ DATA 6" then v.value = "00003379h" matched = true end
+        if v.name == "HANZ NILAI POINTER" then v.value = "0" matched = true end
+        if v.name == "HANZ NILAI" then v.value = "2" matched = true end
+        
+        if matched then v.freeze = true table.insert(updateList, v) end
+    end
+    gg.setValues(updateList)
+    gg.addListItems(updateList)
+    gg.toast("✅ ISLAND RESIDENCE UPDATED & FROZEN")
+end
+
+-- 7. LITTLE PARIS
+function L7()
+    local items = gg.getListItems()
+    local updateList = {}
+    for i, v in ipairs(items) do
+        local matched = false
+        if v.name == "HANZ DATA 1" then v.value = "696B5326h" matched = true end
+        if v.name == "HANZ DATA 2" then v.value = "6F465F6Eh" matched = true end
+        if v.name == "HANZ DATA 3" then v.value = "65727472h" matched = true end
+        if v.name == "HANZ DATA 4" then v.value = "705F7373h" matched = true end
+        if v.name == "HANZ DATA 5" then v.value = "73697261h" matched = true end
+        if v.name == "HANZ DATA 6" then v.value = "00000000h" matched = true end
+        if v.name == "HANZ NILAI POINTER" then v.value = "0" matched = true end
+        if v.name == "HANZ NILAI" then v.value = "2" matched = true end
+        
+        if matched then v.freeze = true table.insert(updateList, v) end
+    end
+    gg.setValues(updateList)
+    gg.addListItems(updateList)
+    gg.toast("✅ LITTLE PARIS UPDATED & FROZEN")
+end
+
+-- 8. EASTER VILLAGE
+function L8()
+    local items = gg.getListItems()
+    local updateList = {}
+    for i, v in ipairs(items) do
+        local matched = false
+        if v.name == "HANZ DATA 1" then v.value = "696B5328h" matched = true end
+        if v.name == "HANZ DATA 2" then v.value = "6F465F6Eh" matched = true end
+        if v.name == "HANZ DATA 3" then v.value = "65727472h" matched = true end
+        if v.name == "HANZ DATA 4" then v.value = "655F7373h" matched = true end
+        if v.name == "HANZ DATA 5" then v.value = "65747361h" matched = true end
+        if v.name == "HANZ DATA 6" then v.value = "00000072h" matched = true end
+        if v.name == "HANZ NILAI POINTER" then v.value = "0" matched = true end
+        if v.name == "HANZ NILAI" then v.value = "2" matched = true end
+        
+        if matched then v.freeze = true table.insert(updateList, v) end
+    end
+    gg.setValues(updateList)
+    gg.addListItems(updateList)
+    gg.toast("✅ EASTER VILLAGE UPDATED & FROZEN")
+end
+
+-- 9. AZTEC ISLAND
+function L9()
+    local items = gg.getListItems()
+    local updateList = {}
+    for i, v in ipairs(items) do
+        local matched = false
+        if v.name == "HANZ DATA 1" then v.value = "696B5328h" matched = true end
+        if v.name == "HANZ DATA 2" then v.value = "6F465F6Eh" matched = true end
+        if v.name == "HANZ DATA 3" then v.value = "65727472h" matched = true end
+        if v.name == "HANZ DATA 4" then v.value = "615F7373h" matched = true end
+        if v.name == "HANZ DATA 5" then v.value = "6365747Ah" matched = true end
+        if v.name == "HANZ DATA 6" then v.value = "00000073h" matched = true end
+        if v.name == "HANZ NILAI POINTER" then v.value = "0" matched = true end
+        if v.name == "HANZ NILAI" then v.value = "2" matched = true end
+        
+        if matched then v.freeze = true table.insert(updateList, v) end
+    end
+    gg.setValues(updateList)
+    gg.addListItems(updateList)
+    gg.toast("✅ AZTEC ISLAND UPDATED & FROZEN")
+end
+
+-- Jalankan Script
+Loading()
+Main()
+
