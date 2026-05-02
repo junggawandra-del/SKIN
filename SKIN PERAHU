@@ -1,0 +1,424 @@
+-- Script Name: HANZ PROJECT - TOWNSHIP
+-- Dev: HANZ
+
+gg.clearResults()
+
+-- FUNGSI EFEK LOADING
+function Loading()
+    gg.toast("  ▂ ▃ ▄ ▅ ▆ ▇ █ 10%")
+    gg.sleep(100)
+    gg.toast("  ▂ ▃ ▄ ▅ ▆ ▇ █ 30%")
+    gg.sleep(100)
+    gg.toast("  ▂ ▃ ▄ ▅ ▆ ▇ █ 50%")
+    gg.sleep(100)
+    gg.toast("  ▂ ▃ ▄ ▅ ▆ ▇ █ 80%")
+    gg.sleep(100)
+    gg.toast("  ▂ ▃ ▄ ▅ ▆ ▇ █ 100%")
+end
+
+Loading()
+
+-- KONFIGURASI TAMPILAN
+local date = os.date("%A, %d %B %Y")
+local time = os.date("%H:%M:%S")
+local header = "Tanggal: " .. date .. "\nJam: " .. time .. "\nGAME : TOWNSHIP\nDEV : HANZ\nMENU : SKIN KAPAL/BOAT\n"
+
+function Main()
+    while true do
+        if gg.isVisible(true) then
+            gg.setVisible(false)
+            local menu = gg.choice({
+                "1. 🏴‍☠️ PIRATE GALLEON",
+                "2. 🛳️ CRUISE LINER",
+                "3. ⛴️ CROISSANT FERRY",
+                "4. 🛶 GONDOLA",
+                "5. 👻 GHOST SHIP",
+                "6. 💖 LOVE BOAT",
+                "7. 🛡️ STURDY DRAKKAR",
+                "8. 🚢 CRUISE SHIP",
+                "9. 🎁 GIFT BOAT",
+                "10. 🐲 DRAGON BOAT",
+                "11. 🏛️ GREEK BIREME",
+                "12. 💨 RIVER STEAMBOAT",
+                "13. 🍰 SWEET BOAT",
+                "14. 🏺 EGYPTIAN THEME SHIP",
+                "15. ❄️ ARTIC BOAT",
+                "16. 🗾 JAPANESE SHIP",
+                "17. ⚔️ KNIGHT SHIP",
+                "18. 🎭 BROADWAY SHIP",
+                "19. 🥚 EASTER SHIP",
+                "❌ KELUAR"
+            }, nil, header)
+
+            if menu == 1 then M1()
+            elseif menu == 2 then M2()
+            elseif menu == 3 then M3()
+            elseif menu == 4 then M4()
+            elseif menu == 5 then M5()
+            elseif menu == 6 then M6()
+            elseif menu == 7 then M7()
+            elseif menu == 8 then M8()
+            elseif menu == 9 then M9()
+            elseif menu == 10 then M10()
+            elseif menu == 11 then M11()
+            elseif menu == 12 then M12()
+            elseif menu == 13 then M13()
+            elseif menu == 14 then M14()
+            elseif menu == 15 then M15()
+            elseif menu == 16 then M16()
+            elseif menu == 17 then M17()
+            elseif menu == 18 then M18()
+            elseif menu == 19 then M19()
+            elseif menu == 20 then os.exit() end
+        end
+        gg.sleep(100)
+    end
+end
+
+-- FUNGSI LOGIKA TERPISAH (1 - 19)
+
+function M1()
+    local items = gg.getListItems()
+    local updateList = {}
+    for i, v in ipairs(items) do
+        if v.name == "HANZ DATA 1" then v.value = "696B531Ah" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ DATA 2" then v.value = "68535F6Eh" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ DATA 3" then v.value = "535F7069h" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ DATA 4" then v.value = "00003154h" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ DATA 5" then v.value = "00000000h" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ DATA 6" then v.value = "00000000h" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ NILAI POINTER" then v.value = "0" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ NILAI" then v.value = "2" v.freeze = true table.insert(updateList, v) end
+    end
+    gg.setValues(updateList)
+    gg.addListItems(updateList)
+    gg.toast("PIRATE GALLEON Aktif")
+end
+
+function M2()
+    local items = gg.getListItems()
+    local updateList = {}
+    for i, v in ipairs(items) do
+        if v.name == "HANZ DATA 1" then v.value = "696B531Ah" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ DATA 2" then v.value = "68535F6Eh" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ DATA 3" then v.value = "535F7069h" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ DATA 4" then v.value = "00003950h" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ DATA 5" then v.value = "00000000h" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ DATA 6" then v.value = "00000000h" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ NILAI POINTER" then v.value = "0" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ NILAI" then v.value = "2" v.freeze = true table.insert(updateList, v) end
+    end
+    gg.setValues(updateList)
+    gg.addListItems(updateList)
+    gg.toast("CRUISE LINER Aktif")
+end
+
+function M3()
+    local items = gg.getListItems()
+    local updateList = {}
+    for i, v in ipairs(items) do
+        if v.name == "HANZ DATA 1" then v.value = "696B531Eh" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ DATA 2" then v.value = "68535F6Eh" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ DATA 3" then v.value = "705F7069h" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ DATA 4" then v.value = "73697261h" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ DATA 5" then v.value = "00000000h" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ DATA 6" then v.value = "00000000h" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ NILAI POINTER" then v.value = "0" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ NILAI" then v.value = "2" v.freeze = true table.insert(updateList, v) end
+    end
+    gg.setValues(updateList)
+    gg.addListItems(updateList)
+    gg.toast("CROISSANT FERRY Aktif")
+end
+
+function M4()
+    local items = gg.getListItems()
+    local updateList = {}
+    for i, v in ipairs(items) do
+        if v.name == "HANZ DATA 1" then v.value = "696B5320h" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ DATA 2" then v.value = "68535F6Eh" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ DATA 3" then v.value = "765F7069h" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ DATA 4" then v.value = "63696E65h" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ DATA 5" then v.value = "00000065h" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ DATA 6" then v.value = "00000000h" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ NILAI POINTER" then v.value = "0" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ NILAI" then v.value = "2" v.freeze = true table.insert(updateList, v) end
+    end
+    gg.setValues(updateList)
+    gg.addListItems(updateList)
+    gg.toast("GONDOLA Aktif")
+end
+
+function M5()
+    local items = gg.getListItems()
+    local updateList = {}
+    for i, v in ipairs(items) do
+        if v.name == "HANZ DATA 1" then v.value = "696B532Eh" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ DATA 2" then v.value = "68535F6Eh" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ DATA 3" then v.value = "685F7069h" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ DATA 4" then v.value = "6F6C6C61h" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ DATA 5" then v.value = "6E656577h" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ DATA 6" then v.value = "32323032h" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ NILAI POINTER" then v.value = "0" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ NILAI" then v.value = "2" v.freeze = true table.insert(updateList, v) end
+    end
+    gg.setValues(updateList)
+    gg.addListItems(updateList)
+    gg.toast("GHOST SHIP Aktif")
+end
+
+function M6()
+    local items = gg.getListItems()
+    local updateList = {}
+    for i, v in ipairs(items) do
+        if v.name == "HANZ DATA 1" then v.value = "696B532Eh" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ DATA 2" then v.value = "68535F6Eh" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ DATA 3" then v.value = "765F7069h" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ DATA 4" then v.value = "6E656C61h" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ DATA 5" then v.value = "656E6974h" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ DATA 6" then v.value = "79614473h" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ NILAI POINTER" then v.value = "0" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ NILAI" then v.value = "2" v.freeze = true table.insert(updateList, v) end
+    end
+    gg.setValues(updateList)
+    gg.addListItems(updateList)
+    gg.toast("LOVE BOAT Aktif")
+end
+
+function M7()
+    local items = gg.getListItems()
+    local updateList = {}
+    for i, v in ipairs(items) do
+        if v.name == "HANZ DATA 1" then v.value = "696B5326h" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ DATA 2" then v.value = "68535F6Eh" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ DATA 3" then v.value = "6E5F7069h" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ DATA 4" then v.value = "6964726Fh" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ DATA 5" then v.value = "646F4763h" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ DATA 6" then v.value = "00000000h" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ NILAI POINTER" then v.value = "0" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ NILAI" then v.value = "2" v.freeze = true table.insert(updateList, v) end
+    end
+    gg.setValues(updateList)
+    gg.addListItems(updateList)
+    gg.toast("STURDY DRAKKAR Aktif")
+end
+
+function M8()
+    local items = gg.getListItems()
+    local updateList = {}
+    for i, v in ipairs(items) do
+        if v.name == "HANZ DATA 1" then v.value = "696B5320h" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ DATA 2" then v.value = "68535F6Eh" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ DATA 3" then v.value = "6A5F7069h" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ DATA 4" then v.value = "6C676E75h" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ DATA 5" then v.value = "00000065h" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ DATA 6" then v.value = "00000000h" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ NILAI POINTER" then v.value = "0" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ NILAI" then v.value = "2" v.freeze = true table.insert(updateList, v) end
+    end
+    gg.setValues(updateList)
+    gg.addListItems(updateList)
+    gg.toast("CRUISE SHIP Aktif")
+end
+
+function M9()
+    local items = gg.getListItems()
+    local updateList = {}
+    for i, v in ipairs(items) do
+        if v.name == "HANZ DATA 1" then v.value = "696B532Eh" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ DATA 2" then v.value = "68535F6Eh" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ DATA 3" then v.value = "635F7069h" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ DATA 4" then v.value = "73697261h" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ DATA 5" then v.value = "73616D74h" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ DATA 6" then v.value = "33323032h" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ NILAI POINTER" then v.value = "0" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ NILAI" then v.value = "2" v.freeze = true table.insert(updateList, v) end
+    end
+    gg.setValues(updateList)
+    gg.addListItems(updateList)
+    gg.toast("GIFT BOAT Aktif")
+end
+
+function M10()
+    local items = gg.getListItems()
+    local updateList = {}
+    for i, v in ipairs(items) do
+        if v.name == "HANZ DATA 1" then v.value = "696B531Ah" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ DATA 2" then v.value = "68535F6Eh" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ DATA 3" then v.value = "435F7069h" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ DATA 4" then v.value = "0000594Eh" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ DATA 5" then v.value = "00000000h" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ DATA 6" then v.value = "00000000h" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ NILAI POINTER" then v.value = "0" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ NILAI" then v.value = "2" v.freeze = true table.insert(updateList, v) end
+    end
+    gg.setValues(updateList)
+    gg.addListItems(updateList)
+    gg.toast("DRAGON BOAT Aktif")
+end
+
+function M11()
+    local items = gg.getListItems()
+    local updateList = {}
+    for i, v in ipairs(items) do
+        if v.name == "HANZ DATA 1" then v.value = "696B5320h" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ DATA 2" then v.value = "68535F6Eh" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ DATA 3" then v.value = "685F7069h" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ DATA 4" then v.value = "616C6C65h" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ DATA 5" then v.value = "00000073h" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ DATA 6" then v.value = "00000000h" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ NILAI POINTER" then v.value = "0" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ NILAI" then v.value = "2" v.freeze = true table.insert(updateList, v) end
+    end
+    gg.setValues(updateList)
+    gg.addListItems(updateList)
+    gg.toast("GREEK BIREME Aktif")
+end
+
+function M12()
+    local items = gg.getListItems()
+    local updateList = {}
+    for i, v in ipairs(items) do
+        if v.name == "HANZ DATA 1" then v.value = "696B532Ch" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ DATA 2" then v.value = "68535F6Eh" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ DATA 3" then v.value = "775F7069h" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ DATA 4" then v.value = "77646C69h" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ DATA 5" then v.value = "32747365h" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ DATA 6" then v.value = "00343230h" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ NILAI POINTER" then v.value = "0" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ NILAI" then v.value = "2" v.freeze = true table.insert(updateList, v) end
+    end
+    gg.setValues(updateList)
+    gg.addListItems(updateList)
+    gg.toast("RIVER STEAMBOAT Aktif")
+end
+
+function M13()
+    local items = gg.getListItems()
+    local updateList = {}
+    for i, v in ipairs(items) do
+        if v.name == "HANZ DATA 1" then v.value = "696B532Ch" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ DATA 2" then v.value = "68535F6Eh" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ DATA 3" then v.value = "625F7069h" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ DATA 4" then v.value = "6874726Ih" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ DATA 5" then v.value = "32796164h" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ DATA 6" then v.value = "00343230h" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ NILAI POINTER" then v.value = "0" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ NILAI" then v.value = "2" v.freeze = true table.insert(updateList, v) end
+    end
+    gg.setValues(updateList)
+    gg.addListItems(updateList)
+    gg.toast("SWEET BOAT Aktif")
+end
+
+function M14()
+    local items = gg.getListItems()
+    local updateList = {}
+    for i, v in ipairs(items) do
+        if v.name == "HANZ DATA 1" then v.value = "696B531Eh" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ DATA 2" then v.value = "68535F6Eh" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ DATA 3" then v.value = "655F7069h" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ DATA 4" then v.value = "74707967h" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ DATA 5" then v.value = "00000000h" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ DATA 6" then v.value = "00000000h" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ NILAI POINTER" then v.value = "0" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ NILAI" then v.value = "2" v.freeze = true table.insert(updateList, v) end
+    end
+    gg.setValues(updateList)
+    gg.addListItems(updateList)
+    gg.toast("EGYPTIAN THEME SHIP Aktif")
+end
+
+function M15()
+    local items = gg.getListItems()
+    local updateList = {}
+    for i, v in ipairs(items) do
+        if v.name == "HANZ DATA 1" then v.value = "696B5320h" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ DATA 2" then v.value = "68535F6Eh" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ DATA 3" then v.value = "615F7069h" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ DATA 4" then v.value = "69746372h" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ DATA 5" then v.value = "00000063h" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ DATA 6" then v.value = "00000000h" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ NILAI POINTER" then v.value = "0" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ NILAI" then v.value = "2" v.freeze = true table.insert(updateList, v) end
+    end
+    gg.setValues(updateList)
+    gg.addListItems(updateList)
+    gg.toast("ARTIC BOAT Aktif")
+end
+
+function M16()
+    local items = gg.getListItems()
+    local updateList = {}
+    for i, v in ipairs(items) do
+        if v.name == "HANZ DATA 1" then v.value = "696B531Eh" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ DATA 2" then v.value = "68535F6Eh" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ DATA 3" then v.value = "6A5F7069h" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ DATA 4" then v.value = "6E617061h" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ DATA 5" then v.value = "00000000h" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ DATA 6" then v.value = "00000000h" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ NILAI POINTER" then v.value = "0" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ NILAI" then v.value = "2" v.freeze = true table.insert(updateList, v) end
+    end
+    gg.setValues(updateList)
+    gg.addListItems(updateList)
+    gg.toast("JAPANESE SHIP Aktif")
+end
+
+function M17()
+    local items = gg.getListItems()
+    local updateList = {}
+    for i, v in ipairs(items) do
+        if v.name == "HANZ DATA 1" then v.value = "696B5320h" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ DATA 2" then v.value = "68535F6Eh" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ DATA 3" then v.value = "4B5F7069h" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ DATA 4" then v.value = "6867696Eh" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ DATA 5" then v.value = "00000074h" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ DATA 6" then v.value = "00000000h" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ NILAI POINTER" then v.value = "0" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ NILAI" then v.value = "2" v.freeze = true table.insert(updateList, v) end
+    end
+    gg.setValues(updateList)
+    gg.addListItems(updateList)
+    gg.toast("KNIGHT SHIP Aktif")
+end
+
+function M18()
+    local items = gg.getListItems()
+    local updateList = {}
+    for i, v in ipairs(items) do
+        if v.name == "HANZ DATA 1" then v.value = "696B532Ah" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ DATA 2" then v.value = "68535F6Eh" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ DATA 3" then v.value = "625F7069h" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ DATA 4" then v.value = "64616F72h" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ DATA 5" then v.value = "5F796177h" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ DATA 6" then v.value = "00003936h" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ NILAI POINTER" then v.value = "0" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ NILAI" then v.value = "2" v.freeze = true table.insert(updateList, v) end
+    end
+    gg.setValues(updateList)
+    gg.addListItems(updateList)
+    gg.toast("BROADWAY SHIP Aktif")
+end
+
+function M19()
+    local items = gg.getListItems()
+    local updateList = {}
+    for i, v in ipairs(items) do
+        if v.name == "HANZ DATA 1" then v.value = "696B5326h" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ DATA 2" then v.value = "68535F6Eh" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ DATA 3" then v.value = "655F7069h" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ DATA 4" then v.value = "65747361h" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ DATA 5" then v.value = "32375F72h" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ DATA 6" then v.value = "00000000h" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ NILAI POINTER" then v.value = "0" v.freeze = true table.insert(updateList, v) end
+        if v.name == "HANZ NILAI" then v.value = "2" v.freeze = true table.insert(updateList, v) end
+    end
+    gg.setValues(updateList)
+    gg.addListItems(updateList)
+    gg.toast("EASTER SHIP Aktif")
+end
+
+-- MENJALANKAN LOOP UTAMA
+Main()
+
